@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammad Bagas Kurnia – Web Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6fa;--surface:#fff;--text:#0c1b2e;--muted:#566678;--line:#d9e2ec;--primary:#0b5cad;--ink:#fff;--accent:#d97f00;--soft:#e6eef8;--grid:rgba(11,92,173,.08);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08111f;--surface:#0f1b2e;--text:#e6edf7;--muted:#8da0b8;--line:#1f3049;--primary:#4cc2ff;--ink:#06121f;--accent:#ffb547;--soft:#12253d;--grid:rgba(76,194,255,.07);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#08111f;--surface:#0f1b2e;--text:#e6edf7;--muted:#8da0b8;--line:#1f3049;--primary:#4cc2ff;--ink:#06121f;--accent:#ffb547;--soft:#12253d;--grid:rgba(76,194,255,.07);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
+body{margin:0;color:var(--text);font:400 16px/1.7 "IBM Plex Sans",system-ui,sans-serif;background:var(--bg) radial-gradient(var(--grid) 1px,transparent 1px) 0 0/26px 26px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:60}
+/* Bercak warna latar (minimalis) */
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+ radial-gradient(28vmax 24vmax at 50% 45%,color-mix(in srgb,var(--primary) 9%,transparent),transparent 70%),
+ radial-gradient(22vmax 20vmax at 62% 62%,color-mix(in srgb,var(--accent) 8%,transparent),transparent 70%),
+ radial-gradient(38vmax 38vmax at 8% 12%,color-mix(in srgb,var(--primary) 16%,transparent),transparent 70%),
+ radial-gradient(30vmax 30vmax at 94% 28%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 70%),
+ radial-gradient(34vmax 34vmax at 18% 88%,color-mix(in srgb,var(--accent) 10%,transparent),transparent 70%),
+ radial-gradient(32vmax 32vmax at 88% 92%,color-mix(in srgb,var(--primary) 14%,transparent),transparent 70%)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{max-width:1240px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font:800 16px/1.15 "Bricolage Grotesque",sans-serif}
+.logo{width:38px;height:38px;border-radius:10px;background:var(--primary);color:var(--ink);display:grid;place-items:center;font:800 13px "Bricolage Grotesque",sans-serif}
+nav{margin-left:auto;display:flex;gap:2px}
+nav a{padding:8px 12px;border-radius:8px;font-size:14px;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--text)}
+nav a.on{color:var(--primary);background:var(--soft);box-shadow:inset 0 -2px 0 var(--primary)}
+.tools{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.lang button{border:0;background:transparent;color:var(--muted);font:600 12px "IBM Plex Sans",sans-serif;padding:8px 11px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--primary);color:var(--ink)}
+.icon{border:1px solid var(--line);background:var(--bg);color:var(--text);width:38px;height:36px;border-radius:8px;cursor:pointer;font-size:16px}
+.cv{background:var(--accent);color:#1a1000;font-weight:600;font-size:14px;padding:10px 18px;border-radius:10px;line-height:1.2}
+.burger{display:none}
+main{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:80px 0 0}
+h2{font:800 clamp(26px,3.4vw,34px)/1.15 "Bricolage Grotesque",sans-serif;margin:0}
+.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;padding:52px 44px;border-radius:28px;border:1.5px solid color-mix(in srgb,var(--primary) 35%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--primary) 11%,var(--surface)),color-mix(in srgb,var(--accent) 9%,var(--surface)))}
+.hero h1{font:800 clamp(38px,6vw,64px)/1.02 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin:0 0 16px}
+.hero p{color:var(--muted);max-width:52ch;margin:0 0 24px;font-size:17px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 20px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid var(--line);background:var(--surface)}
+.btn.p{background:var(--primary);color:var(--ink);border-color:var(--primary)}
+.photo-wrap{position:relative;width:100%;max-width:340px;justify-self:center}
+.photo{position:relative;z-index:1;width:100%;aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:var(--soft);border:3px solid var(--surface)}
+.sh{position:absolute;z-index:0;pointer-events:none}
+.sh.a{inset:20px -20px -20px 20px;border-radius:26px;background:var(--primary)}
+.sh.b{width:96px;height:96px;border-radius:50%;background:var(--accent);top:-30px;right:-30px}
+.sh.c{width:92px;height:84px;border-radius:62% 38% 55% 45%/50% 58% 42% 50%;background:color-mix(in srgb,var(--primary) 30%,var(--surface));bottom:-26px;left:-34px}
+.sh.d{width:70px;height:24px;border-radius:999px;background:var(--accent);left:-34px;top:46px;transform:rotate(-24deg)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.social a{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:13px;font-weight:600;line-height:1.2}
+.social a:hover{border-color:var(--primary);color:var(--primary)}
+.social svg{width:16px;height:16px;flex:none}
+/* Judul bagian */
+.sec-head{display:flex;gap:16px;align-items:stretch;margin:0 0 28px}
+.sec-head::before{content:"";width:5px;border-radius:3px;background:linear-gradient(var(--primary),var(--accent))}
+.sec-head p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:60ch}
+/* Kartu */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.stack{display:grid;gap:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card h3{margin:0;font:700 17px/1.3 "Bricolage Grotesque",sans-serif}
+.card .sub{color:var(--muted);font-size:14px;margin:2px 0 0}
+.card .when{color:var(--primary);font-weight:600;font-size:13px}
+.card p{margin:10px 0 0;font-size:15px}
+/* Kartu proyek */
+.proj-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.proj-tags span{padding:3px 11px;border-radius:999px;background:var(--soft);border:1px solid var(--line);color:var(--primary);font-size:12px;font-weight:600}
+.proj-link{background:none;border:0;padding:0;cursor:pointer;font:600 13px "IBM Plex Sans",sans-serif;color:var(--primary)}
+.proj-link:hover{text-decoration:underline}
+/* Kartu portofolio: ringkas & interaktif */
+#proyek .grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.pj{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:8px;padding:18px 18px 16px;border-radius:16px;background:linear-gradient(160deg,var(--surface),var(--soft));border:1px solid color-mix(in srgb,var(--primary) 22%,var(--line));transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.pj::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--primary),var(--accent));transform:scaleX(.25);transform-origin:left;transition:transform .35s ease}
+.pj[data-open]{cursor:pointer}
+.pj:hover,.pj:focus-visible{transform:translateY(-6px);border-color:var(--primary);box-shadow:6px 6px 0 color-mix(in srgb,var(--accent) 40%,transparent)}
+.pj:hover::before,.pj:focus-visible::before{transform:scaleX(1)}
+.pj-top{display:flex;align-items:center;justify-content:space-between}
+.pj-ico{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);color:var(--primary);transition:transform .3s ease,background .25s,color .25s}
+.pj-ico svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pj:hover .pj-ico,.pj:focus-visible .pj-ico{background:var(--primary);color:var(--ink);transform:rotate(-8deg) scale(1.08)}
+.pj-yr{font-size:12px;font-weight:600;color:var(--muted)}
+.pj h3{margin:0;font:700 16px/1.3 "Bricolage Grotesque",sans-serif}
+.pj .pj-d{margin:0;font-size:13.5px;line-height:1.6;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pj .proj-tags{margin-top:2px;gap:6px}
+.pj .proj-tags span{padding:2px 9px;font-size:11px}
+.pj-go{margin-top:auto;padding-top:6px;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--primary)}
+.pj-go b{display:inline-block;transition:transform .25s ease}
+.pj:hover .pj-go b,.pj:focus-visible .pj-go b{transform:translateX(5px)}
+.pj.soon{border-style:dashed}
+.pj-lbl{align-self:center;font-style:normal;font-size:11px;font-weight:600;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.pj,.pj::before,.pj-ico,.pj-go b{transition:none}.pj:hover,.pj:focus-visible{transform:none}}
+/* Dialog detail proyek */
+dialog.pd{width:min(760px,calc(100vw - 32px));max-height:calc(100dvh - 48px);padding:0;border:1.5px solid color-mix(in srgb,var(--primary) 40%,var(--line));border-radius:18px;background:var(--surface);color:var(--text);overflow:auto}
+dialog.pd::backdrop{background:rgba(6,18,31,.55)}
+.pd-in{padding:26px 28px 28px}
+.pd-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.pd-top h3{margin:0;font:800 22px/1.25 "Bricolage Grotesque",sans-serif}
+.pd-x{flex:none;width:36px;height:36px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:16px;cursor:pointer}
+.pd-fig{margin:18px 0 0}
+.pd-figs .pd-fig img{background:#fff;padding:8px;transition:transform .3s ease,box-shadow .3s ease}
+.pd-figs .pd-fig:hover img{transform:scale(1.02);box-shadow:0 8px 22px color-mix(in srgb,var(--primary) 22%,transparent)}
+.pd-chart{margin:20px 0 0;padding:14px 14px 12px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(160deg,var(--surface),var(--soft))}
+.pd-chart svg{display:block;width:100%;height:auto;overflow:visible}
+.pd-chart text{font:500 11px "IBM Plex Sans",sans-serif;fill:var(--text)}
+.ch-grid{stroke:var(--line);stroke-width:1;stroke-dasharray:3 4}
+.pd-chart .ch-txt{fill:var(--muted)}
+.ch-b95{fill:color-mix(in srgb,var(--primary) 14%,transparent)}
+.ch-b80{fill:color-mix(in srgb,var(--primary) 26%,transparent)}
+.ch-line{stroke:var(--primary);stroke-width:3;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:600;stroke-dashoffset:600}
+dialog[open] .ch-line{animation:ch-draw 1.1s ease .15s forwards}
+@keyframes ch-draw{to{stroke-dashoffset:0}}
+.ch-dot{fill:var(--surface);stroke:var(--primary);stroke-width:2.5;transition:r .2s ease}
+.ch-hit{fill:transparent}
+.ch-guide{stroke:var(--accent);stroke-width:1.5;stroke-dasharray:4 3;opacity:0;transition:opacity .2s}
+.ch-tip{opacity:0;pointer-events:none;transition:opacity .2s}
+.ch-tip rect{fill:var(--surface);stroke:var(--primary);stroke-width:1.2}
+.pd-chart .ch-t1{font-weight:700;fill:var(--primary)}
+.pd-chart .ch-t2{fill:var(--muted);font-size:10.5px}
+.ch-pt{outline:none}
+.ch-pt:hover .ch-guide,.ch-pt:focus .ch-guide,.ch-pt:hover .ch-tip,.ch-pt:focus .ch-tip{opacity:1}
+.ch-pt:hover .ch-dot,.ch-pt:focus .ch-dot{r:7;fill:var(--accent)}
+.ch-leg{display:flex;flex-wrap:wrap;gap:16px;margin-top:8px;font-size:12px;color:var(--muted)}
+.ch-leg span{display:inline-flex;align-items:center;gap:6px}
+.ch-leg b{font-weight:600}
+.ch-leg i{display:inline-block;width:18px;height:10px;border-radius:3px}
+.ch-leg .l{height:3px;background:var(--primary)}
+.ch-leg .b80{background:color-mix(in srgb,var(--primary) 40%,transparent)}
+.ch-leg .b95{background:color-mix(in srgb,var(--primary) 18%,transparent)}
+.bar{transform-box:fill-box;transform-origin:50% 100%}
+.bar-a{fill:var(--accent)}
+.bar-s{fill:var(--primary)}
+dialog[open] .bar{animation:bar-grow .8s ease both}
+@keyframes bar-grow{from{transform:scaleY(0)}}
+.ch-pt:hover .bar,.ch-pt:focus .bar{filter:brightness(1.12)}
+.pd-chart .ch-val{font-weight:700;text-anchor:middle}
+.ch-leg .la{height:10px;background:var(--accent)}
+.ch-leg .ls{height:10px;background:var(--primary)}
+@media (prefers-reduced-motion:reduce){.bar{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.ch-line{animation:none!important;stroke-dashoffset:0}.pd-figs .pd-fig img,.ch-dot,.ch-guide,.ch-tip{transition:none}}
+.pd-figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:18px}
+.pd-figs .pd-fig{margin:0}
+.pd-fig img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:var(--soft)}
+.pd-fig figcaption{margin-top:6px;color:var(--muted);font-size:13px}
+.pd h4{margin:22px 0 6px;font:800 15px "Bricolage Grotesque",sans-serif;color:var(--primary)}
+.pd p{margin:0;font-size:15px;color:var(--muted)}
+.pd ul{margin:0;padding:0;list-style:none;color:var(--muted);font-size:15px}
+.pd li{position:relative;padding-left:16px}
+.pd li+li{margin-top:6px}
+.pd li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.pd-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+/* Kartu Tentang saya: lebih tegas */
+#tentang .card{background:linear-gradient(135deg,color-mix(in srgb,var(--primary) 14%,var(--surface)),color-mix(in srgb,var(--accent) 12%,var(--surface)));border:1.5px solid color-mix(in srgb,var(--primary) 55%,var(--line));border-left:6px solid var(--primary);border-radius:18px;padding:26px 28px;box-shadow:8px 8px 0 color-mix(in srgb,var(--primary) 18%,transparent)}
+.edu-card{display:grid;grid-template-columns:72px 1fr;gap:20px;align-items:start;padding:24px;border-radius:16px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--primary)}
+.edu-logo{position:relative;width:72px;height:72px;border-radius:14px;background:var(--soft);border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;font:800 12px "Bricolage Grotesque",sans-serif;color:var(--primary);text-align:center}
+.edu-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:8px;background:var(--surface)}
+.edu-body h3{margin:0;font:800 19px/1.3 "Bricolage Grotesque",sans-serif}
+.edu-body .prog{margin:2px 0 0;font-size:15px}
+.edu-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.edu-chips span{padding:4px 12px;border-radius:999px;background:var(--soft);border:1px solid var(--line);color:var(--primary);font-size:12px;font-weight:600}
+.edu-body .desc{margin:16px 0 0;padding-left:14px;border-left:2px solid var(--line);color:var(--muted);font-size:14px;line-height:1.75}
+.timeline{position:relative;display:grid;gap:22px;padding-left:44px}
+.timeline::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:2px;background:linear-gradient(var(--primary),var(--line))}
+.tl-item{position:relative}
+.tl-dot{position:absolute;left:-44px;top:26px;width:24px;height:24px;border-radius:50%;background:var(--surface);border:2px solid var(--primary);display:grid;place-items:center;box-shadow:0 0 0 4px var(--bg)}
+.tl-dot svg{width:12px;height:12px;fill:none;stroke:var(--primary);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.exp-org{display:flex;align-items:center;gap:8px;margin:10px 0 0;color:var(--muted);font-size:14px}
+.exp-org svg{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.exp-list{margin:16px 0 0;padding:0;list-style:none;color:var(--muted);font-size:14px;line-height:1.75}
+.exp-list li{position:relative;padding-left:16px}
+.exp-list li+li{margin-top:8px}
+.exp-list li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+/* Keterampilan: tiga kartu */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;align-items:stretch}
+.sk-card{background:linear-gradient(160deg,var(--surface),var(--soft));border:1px solid color-mix(in srgb,var(--primary) 28%,var(--line));border-radius:18px;padding:24px}
+.sk-head{display:flex;align-items:center;gap:12px;margin:0 0 22px}
+.sk-ico{width:38px;height:38px;border-radius:10px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--primary)}
+.sk-head h3{margin:0;font:800 18px "Bricolage Grotesque",sans-serif}
+.sk-list{display:flex;flex-wrap:wrap;gap:10px}
+.sk{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:var(--surface);border:1px solid var(--line);font-size:13px;font-weight:500;line-height:1.2}
+.sk svg,.sk-ico svg{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sk svg{color:var(--primary)}
+.sk.g svg{color:var(--accent)}
+.sw{display:grid;gap:14px}
+.sw-i{display:grid;gap:7px;font-size:14px;font-weight:600}
+.sw-n{display:flex;align-items:center;gap:9px}
+.sw-n svg{width:18px;height:18px;flex:none;fill:none;stroke:var(--primary);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sw-i i{height:10px;border-radius:6px;background:var(--surface);border:1px solid var(--line);position:relative;overflow:hidden}
+.sw-i i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--v);border-radius:6px;background:linear-gradient(90deg,var(--primary),var(--accent))}
+/* Kontak: ikon interaktif */
+.ci{display:flex;flex-wrap:wrap;gap:16px}
+.ci a{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:var(--surface);color:var(--primary);border:1.5px solid color-mix(in srgb,var(--primary) 40%,var(--line));transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.ci a:hover,.ci a:focus-visible{transform:translateY(-4px);background:var(--primary);color:var(--ink);box-shadow:6px 6px 0 color-mix(in srgb,var(--accent) 45%,transparent)}
+.ci a:active{transform:translateY(-1px)}
+.ci svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (prefers-reduced-motion:reduce){.ci a{transition:none}.ci a:hover,.ci a:focus-visible{transform:none}}
+footer{max-width:1000px;margin:80px auto 0;padding:24px 20px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media (max-width:1100px){
+ nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:10px 20px}
+ nav.open{display:flex}
+ .burger{display:block}
+ .tools{margin-left:auto}
+}
+@media (max-width:700px){.hero{grid-template-columns:1fr;padding:32px 22px 40px;border-radius:22px}.photo-wrap{max-width:250px;order:-1;margin:10px 20px 0 0}.sh.b{right:-18px;top:-20px;width:70px;height:70px}.sh.c{left:-18px}.sh.d{display:none}.cv{display:none}.edu-card{grid-template-columns:56px 1fr;gap:14px;padding:18px}.edu-logo{width:56px;height:56px}.timeline{padding-left:34px}.tl-dot{left:-34px}.key{gap:10px}.pd-in{padding:20px 18px 22px}}
+/* Efek menyala saat kursor diarahkan ke kartu */
+.card,.edu-card,.sk-card{transition:transform .25s ease,box-shadow .3s ease,border-color .25s ease}
+.card:hover,.edu-card:hover,.sk-card:hover,#tentang .card:hover,
+.card:focus-within,.edu-card:focus-within,.sk-card:focus-within{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 0 0 1px var(--primary),0 0 26px color-mix(in srgb,var(--primary) 50%,transparent),0 12px 32px color-mix(in srgb,var(--accent) 24%,transparent)}
+.pj:hover,.pj:focus-visible{box-shadow:0 0 0 1px var(--primary),0 0 26px color-mix(in srgb,var(--primary) 50%,transparent),6px 6px 0 color-mix(in srgb,var(--accent) 40%,transparent)}
+.sk{transition:box-shadow .25s ease,border-color .25s ease,transform .25s ease}
+.sk:hover{transform:translateY(-2px);border-color:var(--primary);box-shadow:0 0 14px color-mix(in srgb,var(--primary) 45%,transparent)}
+.sw-i:hover i{border-color:var(--primary);box-shadow:0 0 12px color-mix(in srgb,var(--primary) 50%,transparent)}
+@media (prefers-reduced-motion:reduce){.card,.edu-card,.sk-card,.sk{transition:none}.card:hover,.edu-card:hover,.sk-card:hover,#tentang .card:hover,.sk:hover{transform:none}}
+/* Sertifikat */
+#sertifikasi .grid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.pj-thumb{margin:-2px -2px 4px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff;aspect-ratio:16/10}
+.pj-thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .35s ease}
+.pj:hover .pj-thumb img,.pj:focus-visible .pj-thumb img{transform:scale(1.05)}
+.cert-frame{display:block;width:100%;height:68vh;margin-top:18px;border:1px solid var(--line);border-radius:12px;background:#fff}
+@media (prefers-reduced-motion:reduce){.pj-thumb img{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+<symbol id="i-bar" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+<symbol id="i-sigma" viewBox="0 0 24 24"><path d="M18 5H6l7 7-7 7h12"/></symbol>
+<symbol id="i-pie" viewBox="0 0 24 24"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><path d="M8 6l2 4M8 18l2-4M14 12h2"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2zM9 4v14M15 6v14"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h6"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5a3 3 0 0 1 0 6M18 14c2 .7 3 2.5 3 6"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.7 7L3 21l2-5.3A8 8 0 1 1 21 12z"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-2.6-.6-.6-2.6z"/></symbol>
+<symbol id="i-python" viewBox="0 0 24 24"><path d="M12 3c-4 0-4 1.5-4 3v2h4v1H6c-2 0-3 1.5-3 4s1 4 3 4h2v-3c0-1.5 1-3 3-3h4c1.5 0 2-1 2-2V6c0-2-2-3-5-3zM12 21c4 0 4-1.500 4-3v-2h-4v-1h6c2 0 3-1.500 3-4s-1-4-3-4h-2v3c0 1.500-1 3-3 3H9c-1.500 0-2 1-2 2v3c0 2 2 3 5 3z"/></symbol>
+<symbol id="i-r" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="7"/><path d="M9 16V8h4a2 2 0 0 1 0 4H9M13 12l3 4"/></symbol>
+<symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.700 3.600 3 8 3s8-1.300 8-3V5M4 12c0 1.700 3.600 3 8 3s8-1.300 8-3"/></symbol>
+<symbol id="i-excel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8l8 8M16 8l-8 8"/></symbol>
+<symbol id="i-tableau" viewBox="0 0 24 24"><path d="M12 3v18M7 8h10M3 12h18M7 16h10M5 10v4M19 10v4"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.500-5-2.500-7-3m14 6v-3.870a3.370 3.370 0 0 0-.94-2.610c3.140-.350 6.440-1.540 6.440-7A5.440 5.440 0 0 0 20 4.770 5.070 5.070 0 0 0 19.910 1S18.730.650 16 2.480a13.380 13.380 0 0 0-7 0C6.270.650 5.090 1 5.090 1A5.070 5.070 0 0 0 5 4.770a5.440 5.440 0 0 0-1.500 3.780c0 5.420 3.300 6.610 6.440 7A3.370 3.370 0 0 0 9 18.130V22"/></symbol>
+<symbol id="i-office" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h4"/></symbol>
+<symbol id="i-decision" viewBox="0 0 24 24"><path d="M12 21v-9l-7-7M5 10V5h5M12 12l7-7M19 10V5h-5"/></symbol>
+<symbol id="i-looker" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 17v-4M12 17V8M16 17v-6"/></symbol>
+</defs></svg>
+<header>
+ <div class="bar">
+  <a class="brand" href="#beranda" aria-label="Muhammad Bagas Kurnia"><span class="logo">MBK</span><span>Muhammad Bagas<br>Kurnia</span></a>
+  <nav id="nav" aria-label="Menu">
+   <a href="#beranda" class="on" data-id="Beranda" data-en="Home">Beranda</a>
+   <a href="#tentang" data-id="Tentang" data-en="About">Tentang</a>
+   <a href="#pendidikan" data-id="Pendidikan" data-en="Education">Pendidikan</a>
+   <a href="#pengalaman" data-id="Pengalaman" data-en="Experience">Pengalaman</a>
+   <a href="#keterampilan" data-id="Keterampilan" data-en="Skills">Keterampilan</a>
+   <a href="#organisasi" data-id="Organisasi" data-en="Organizations">Organisasi</a>
+   <a href="#proyek" data-id="Proyek" data-en="Projects">Proyek</a>
+   <a href="#sertifikasi" data-id="Sertifikasi" data-en="Certifications">Sertifikasi</a>
+   <a href="#kontak" data-id="Kontak" data-en="Contact">Kontak</a>
+  </nav>
+  <div class="tools">
+   <div class="lang" role="group" aria-label="Bahasa / Language">
+    <button id="en" aria-pressed="false">EN</button><button id="id" aria-pressed="true">ID</button>
+   </div>
+   <button class="icon" id="theme" aria-label="Mode gelap / Dark mode">☾</button>
+   <a class="cv" href="cv.pdf" download data-id="Unduh CV" data-en="Download CV">Unduh CV</a>
+   <button class="icon burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+ </div>
+</header>
+
+<main>
+ <section id="beranda" style="padding-top:32px;padding-bottom:8px">
+  <div class="hero">
+   <div>
+    <h1>Muhammad Bagas Kurnia</h1>
+    <p data-id="Lulusan Sains Data yang tertarik pada analisis data, visualisasi data, dan time series forecasting, serta kemampuan dalam mengolah dan menganalisis data untuk menghasilkan informasi yang bermanfaat." data-en="A Data Science graduate interested in data analysis, data visualization, and time series forecasting, with skills in data processing and analysis to generate meaningful insights.">Lulusan Sains Data yang tertarik pada analisis data, visualisasi data, dan time series forecasting, serta kemampuan dalam mengolah dan menganalisis data untuk menghasilkan informasi yang bermanfaat.</p>
+    <div class="btns">
+     <a class="btn p" href="#proyek" data-id="Lihat proyek" data-en="View projects">Lihat proyek</a>
+     <a class="btn" href="#kontak" data-id="Hubungi saya" data-en="Contact me">Hubungi saya</a>
+    </div>
+    <div class="social" aria-label="Sosial media">
+     <a href="https://www.instagram.com/mbgsk23/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>@Mbgsk23</span></a>
+     <a href="https://www.linkedin.com/in/muhammadbagaskurnia/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><span>Muhammad Bagas Kurnia</span></a>
+     <a href="https://github.com/mbgsk23" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span>GitHub</span></a>
+    </div>
+   </div>
+   <div class="photo-wrap"><span class="sh a"></span><span class="sh b"></span><span class="sh c"></span><span class="sh d"></span><div class="photo"><img src="foto.jpeg" alt="Foto Muhammad Bagas Kurnia"></div></div>
+  </div>
+ </section>
+
+ <section id="tentang">
+  <div class="sec-head"><div>
+   <h2 data-id="Tentang saya" data-en="About me">Tentang saya</h2>
+   <p data-id="Gambaran singkat tentang latar belakang, minat, dan tujuan karier saya." data-en="A short overview of my background, interests, and career goals.">Gambaran singkat tentang latar belakang, minat, dan tujuan karier saya.</p>
+  </div></div>
+  <div class="card"><p style="margin:0" data-id="Saya adalah lulusan Sains Data yang memiliki ketertarikan pada analisis data, visualisasi data, dan peramalan deret waktu (time series forecasting). Saya senang mengeksplorasi data, mengidentifikasi pola, serta mengolah data mentah menjadi informasi yang bermakna untuk mendukung pengambilan keputusan berbasis data. Saya memiliki motivasi untuk terus meningkatkan kemampuan analitis dan menerapkan pengetahuan yang dimiliki dalam mengembangkan solusi berbasis data yang efektif dan relevan dengan kebutuhan." data-en="I am a Data Science graduate with an interest in data analysis, data visualization, and time series forecasting. I enjoy exploring data, identifying patterns, and transforming raw data into meaningful insights to support data-driven decision-making. I am motivated to continuously improve my analytical skills and apply my knowledge to develop effective data-driven solutions that address real-world needs.">Saya adalah lulusan Sains Data yang memiliki ketertarikan pada analisis data, visualisasi data, dan peramalan deret waktu (time series forecasting). Saya senang mengeksplorasi data, mengidentifikasi pola, serta mengolah data mentah menjadi informasi yang bermakna untuk mendukung pengambilan keputusan berbasis data. Saya memiliki motivasi untuk terus meningkatkan kemampuan analitis dan menerapkan pengetahuan yang dimiliki dalam mengembangkan solusi berbasis data yang efektif dan relevan dengan kebutuhan.</p></div>
+ </section>
+
+ <section id="pendidikan">
+  <div class="sec-head"><div><h2 data-id="Landasan akademis" data-en="Academic foundation">Landasan akademis</h2></div></div>
+  <div class="stack">
+   <article class="edu-card">
+    <div class="edu-logo"><span>ITERA</span><img src="logo-itera.png" alt="Logo Institut Teknologi Sumatera" onerror="this.remove()"></div>
+    <div class="edu-body">
+     <h3 data-id="Institut Teknologi Sumatera" data-en="Sumatra Institute of Technology">Institut Teknologi Sumatera</h3>
+     <p class="prog" data-id="S1 – Sains Data" data-en="Bachelor’s – Data Science">S1 – Sains Data</p>
+     <div class="edu-chips"><span>2021 – 2026</span><span class="gpa" data-id="IPK: 2.95/4.00" data-en="GPA: 2.95/4.00">IPK: 2.95/4.00</span></div>
+     <p class="desc" data-id="Menyelesaikan mata kuliah yang relevan di bidang Sains Data, seperti Statistika, Pemrograman, Analisis Data, Data Mining, Visualisasi Data, Pembelajaran Mesin (Machine Learning), dan Analisis Deret Waktu (Time Series Analysis). Menghasilkan Tugas Akhir berjudul: Prediksi Rata-Rata Temperatur Terhadap Kelembapan Menggunakan Metode ARIMAX." data-en="Completed relevant coursework in Data Science, including Statistics, Programming, Data Analysis, Data Mining, Data Visualization, Machine Learning, and Time Series Analysis. Completed a final project titled: Forecasting Humidity Using Average Temperature with the ARIMAX Method.">Menyelesaikan mata kuliah yang relevan di bidang Sains Data, seperti Statistika, Pemrograman, Analisis Data, Data Mining, Visualisasi Data, Pembelajaran Mesin (Machine Learning), dan Analisis Deret Waktu (Time Series Analysis). Menghasilkan Tugas Akhir berjudul: Prediksi Rata-Rata Temperatur Terhadap Kelembapan Menggunakan Metode ARIMAX.</p>
+    </div>
+   </article>
+   <article class="edu-card">
+    <div class="edu-logo"><span>SMKN 4</span><img src="logo-smkn4.png" alt="Logo SMK Negeri 4 Bandar Lampung" onerror="this.remove()"></div>
+    <div class="edu-body">
+     <h3>SMK Negeri 4 Bandar Lampung</h3>
+     <p class="prog" data-id="Teknik Komputer dan Jaringan" data-en="Computer and Network Engineering">Teknik Komputer dan Jaringan</p>
+     <div class="edu-chips"><span>2018 – 2021</span></div>
+    </div>
+   </article>
+  </div>
+ </section>
+
+ <section id="pengalaman">
+  <div class="sec-head"><div>
+   <h2 data-id="Jejak profesional" data-en="Professional journey">Jejak profesional</h2>
+   <p data-id="Pengalaman dan kontribusi yang membentuk kompetensi serta mempersiapkan saya menghadapi tantangan profesional." data-en="Professional experiences and contributions that have shaped my competencies and prepared me to take on professional challenges.">Pengalaman kerja yang membentuk kemampuan dan cara berpikir saya dalam menyelesaikan masalah.</p>
+  </div></div>
+  <div class="timeline">
+   <div class="tl-item">
+    <span class="tl-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span>
+    <article class="edu-card">
+     <div class="edu-logo"><span>Logo</span><img src="logo-pengalaman1.png" alt="Logo instansi" onerror="this.remove()"></div>
+     <div class="edu-body">
+      <h3 data-id="Internship Access Service Operation (ASO)" data-en="Access Service Operation (ASO) Internship">Posisi / Peran</h3>
+      <div class="edu-chips"><span data-id="Oktober 2019 – Maret 2020" data-en="October 2019 – March 2020">Januari – Juni 2025</span></div>
+      <p class="exp-org"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg><span data-id="PT, TELEKOMUNIKASI INDONESIA, tbk, Bandar Lampung" data-en="PT, TELEKOMUNIKASI INDONESIA, tbk, Bandar Lampung">Nama perusahaan atau instansi, Kota</span></p>
+      <ul class="exp-list"><li data-id="Mengelola sistem ticketing dan monitoring komplain atau pengaduan gangguan pelanggan." data-en="Managed ticketing systems and monitored customer complaints and service disruption reports.">Jelaskan tanggung jawab utama dan hasil kerja Anda. Gunakan angka bila ada, misalnya “mempercepat pelaporan dari 3 hari menjadi 1 hari”.</li></ul>
+     </div>
+    </article>
+   </div>
+   <div class="tl-item">
+    <span class="tl-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span>
+    <article class="edu-card">
+     <div class="edu-logo"><span>Logo</span><img src="logo-pengalaman2.png" alt="Logo instansi" onerror="this.remove()"></div>
+     <div class="edu-body">
+      <h3 data-id="Staf Magang Bidang E-Government" data-en="Intern E-Government Division">Posisi / Peran</h3>
+      <div class="edu-chips"><span data-id="Juli – Agustus 2025" data-en="July – August 2025">Juli – Agustus 2024</span></div>
+      <p class="exp-org"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg><span data-id="Dinas Komunikasi dan Informatika (Diskominfo), Kota Bandar Lampung" data-en="Dinas Komunikasi dan Informatika (Diskominfo), Kota Bandar Lampung">Nama perusahaan atau instansi, Kota</span></p>
+      <ul class="exp-list"><li data-id="Membantu pelaksanaan administrasi pada Bidang E-Government, termasuk pengelolaan dokumen, pengarsipan berkas, serta mendukung kelancaran kegiatan operasional dan pelayanan administrasi bidang." data-en="Assisted with administrative tasks in the E-Government Division, including document management, file archiving, and supporting the smooth execution of operational activities and administrative services within the division.">Satu kalimat tentang tanggung jawab dan pencapaian Anda.</li></ul>
+     </div>
+    </article>
+   </div>
+   <div class="tl-item">
+    <span class="tl-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></span>
+    <article class="edu-card">
+     <div class="edu-logo"><span>Logo</span><img src="logo-pengalaman3.png" alt="Logo instansi" onerror="this.remove()"></div>
+     <div class="edu-body">
+      <h3 data-id="Asisten Praktikum Analisis Deret Waktu" data-en="time series analysis Lab Assistant">Posisi / Peran</h3>
+      <div class="edu-chips"><span data-id="Februari – Mei 2026" data-en="February – May 2026">Juni – Agustus 2023</span></div>
+      <p class="exp-org"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg><span data-id="Program Studi Sains Data — Institut Teknologi Sumatera" data-en="Program Studi Sains Data — Institut Teknologi Sumatera">Nama perusahaan atau instansi, Kota</span></p>
+      <ul class="exp-list"><li data-id="Melakukan pendampingan dan evaluasi pelaksanaan praktikum Analisis Deret Waktu menggunakan RStudio, termasuk membimbing mahasiswa dalam pengolahan data deret waktu, penerapan metode peramalan, serta interpretasi hasil analisis untuk mendukung pemahaman konsep dan penerapan metode analisis deret waktu." data-en="Guided students during Time Series Analysis practicums using RStudio, providing support in time series data processing, forecasting methods, and result interpretation to enhance their understanding and practical application of time series analysis.">Satu kalimat tentang tanggung jawab dan pencapaian Anda.</li></ul>
+     </div>
+    </article>
+   </div>
+  </div>
+ </section>
+
+ <section id="keterampilan">
+  <div class="sec-head"><div>
+   <h2 data-id="Keterampilan teknis" data-en="Technical skills">Keterampilan teknis yang berdampak</h2>
+   <p data-id="Perpaduan keahlian teknis, soft skills, dan perangkat yang saya gunakan untuk bekerja dengan data dan tim." data-en="A mix of technical expertise, soft skills, and tools I use to work with data and teams.">Perpaduan keahlian teknis, soft skills, dan perangkat yang saya gunakan untuk bekerja dengan data dan tim.</p>
+  </div></div>
+  <div class="skills">
+   <div class="sk-card"><div class="sk-head"><span class="sk-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-code"/></svg></span><h3 data-id="Hard Skills" data-en="Hard Skills">Hard Skills</h3></div><div class="sk-list"><span class="sk"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bar"/></svg><span data-id="Analisis Data" data-en="Data Analysis">Analisis Data</span></span><span class="sk"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sigma"/></svg><span data-id="Pemodelan Statistik" data-en="Statistical Modeling">Pemodelan Statistik</span></span><span class="sk"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pie"/></svg><span data-id="Visualisasi Data" data-en="Data Visualization">Visualisasi Data</span></span><span class="sk"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-brain"/></svg><span data-id="Penulisan Laporan" data-en="Report Writing">Penulisan Laporan</span></span></div></div>
+   <div class="sk-card"><div class="sk-head"><span class="sk-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bulb"/></svg></span><h3 data-id="Soft Skills" data-en="Soft Skills">Soft Skills</h3></div><div class="sk-list"><span class="sk g"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg><span data-id="Pemecahan Masalah" data-en="Problem Solving">Pemecahan Masalah</span></span><span class="sk g"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg><span data-id="Berpikir Analitis" data-en="Analytical Thinking">Berpikir Analitis</span></span><span class="sk g"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-decision"/></svg><span data-id="Pengambilan keputusan" data-en="Decision making">Pengambilan keputusan</span></span><span class="sk g"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-target"/></svg><span data-id="Ketelitian" data-en="Attention to Detail">Ketelitian</span></span></div></div>
+   <div class="sk-card"><div class="sk-head"><span class="sk-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tool"/></svg></span><h3 data-id="Perangkat Lunak &amp; Alat" data-en="Software &amp; Tools">Perangkat Lunak &amp; Alat</h3></div><div class="sw"><div class="sw-i"><span class="sw-n"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-python"/></svg>Python</span><i style="--v:60%"></i></div><div class="sw-i"><span class="sw-n"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-r"/></svg>R</span><i style="--v:80%"></i></div><div class="sw-i"><span class="sw-n"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-excel"/></svg>Microsoft Excel</span><i style="--v:70%"></i></div><div class="sw-i"><span class="sw-n"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-office"/></svg>Microsoft Office</span><i style="--v:70%"></i></div><div class="sw-i"><span class="sw-n"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-looker"/></svg>Looker Studio</span><i style="--v:50%"></i></div></div></div>
+  </div>
+ </section>
+
+ <section id="organisasi">
+  <div class="sec-head"><div>
+   <h2 data-id="Organisasi" data-en="Organization">Kontribusi dan kepemimpinan</h2>
+   <p data-id="Keterlibatan dalam organisasi yang mengasah kerja sama, komunikasi, dan rasa tanggung jawab." data-en="Involvement in organizations that sharpened my teamwork, communication, and sense of responsibility.">Keterlibatan dalam organisasi yang mengasah kerja sama, komunikasi, dan rasa tanggung jawab.</p>
+  </div></div>
+  <div class="stack">
+   <div class="card">
+    <div class="row"><h3 data-id="Anggota Tetap" data-en="Permanent Member">Anggota Tetap</h3><span class="when">2021 – 2026</span></div>
+    <p class="sub" data-id="Himpunan Sains Data, Institut Teknologi Sumatera" data-en="Data Science Student Association, Sumatra Institute of Technology">Himpunan Sains Data, Institut Teknologi Sumatera</p>
+    <p data-id="Aktif mengikuti kegiatan himpunan dan berkolaborasi dengan anggota lain dalam program kerja serta acara di bidang sains data." data-en="Actively took part in association activities and collaborated with other members on work programs and events in the field of data science.">Aktif mengikuti kegiatan himpunan dan berkolaborasi dengan anggota lain dalam program kerja serta acara di bidang sains data.</p>
+   </div>
+   <div class="card">
+    <div class="row"><h3 data-id="Anggota Tim Basket" data-en="Basketball Team Member">Anggota Tim Basket</h3><span class="when">2018 – 2021</span></div>
+    <p class="sub" data-id="Ekstrakurikuler Basket, SMK Negeri 4 Bandar Lampung" data-en="Basketball Extracurricular, SMK Negeri 4 Bandar Lampung">Ekstrakurikuler Basket, SMK Negeri 4 Bandar Lampung</p>
+    <p data-id="Berlatih rutin bersama tim, melatih kedisiplinan, kerja sama tim, dan sportivitas." data-en="Trained regularly with the team, building discipline, teamwork, and sportsmanship.">Berlatih rutin bersama tim, melatih kedisiplinan, kerja sama tim, dan sportivitas.</p>
+   </div>
+  </div>
+ </section>
+
+ <section id="proyek">
+  <div class="sec-head"><div>
+   <h2 data-id="Proyek" data-en="Projects">Karya pilihan</h2>
+   <p data-id="Proyek yang menunjukkan bagaimana analisis data diterapkan untuk menjawab masalah nyata." data-en="Projects that show how data analysis is applied to answer real problems.">Proyek yang menunjukkan bagaimana analisis data diterapkan untuk menjawab masalah nyata.</p>
+  </div></div>
+  <div class="grid">
+   <article class="pj" tabindex="0" role="button" data-open="p-kriging" aria-label="Interpolasi Curah Hujan dengan Ordinary Kriging">
+    <div class="pj-top"><span class="pj-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-map"/></svg></span><span class="pj-yr">2024</span></div>
+    <h3 data-id="Interpolasi Curah Hujan dengan Ordinary Kriging" data-en="Rainfall Interpolation with Ordinary Kriging">Interpolasi Curah Hujan dengan Ordinary Kriging</h3>
+    <p class="pj-d" data-id="Peta interpolasi curah hujan Januari–April 2024 dari 30 stasiun BMKG di Tulang Bawang Barat memakai Ordinary Kriging." data-en="Interpolated rainfall map for January–April 2024 from 30 BMKG stations in Tulang Bawang Barat using Ordinary Kriging.">Peta interpolasi curah hujan Januari–April 2024 dari 30 stasiun BMKG di Tulang Bawang Barat memakai Ordinary Kriging.</p>
+    <div class="proj-tags"><em class="pj-lbl" data-id="Alat:" data-en="Tools:">Alat:</em><span>Python</span><span>QGIS</span></div>
+    <span class="pj-go"><span data-id="Lihat detail" data-en="View details">Lihat detail</span><b aria-hidden="true">→</b></span>
+   </article>
+   <article class="pj" tabindex="0" role="button" data-open="p-nvda" aria-label="Peramalan Harga Saham NVIDIA dengan ARCH-GARCH">
+    <div class="pj-top"><span class="pj-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sigma"/></svg></span><span class="pj-yr">2024</span></div>
+    <h3 data-id="Peramalan Harga Saham NVIDIA dengan ARCH-GARCH" data-en="NVIDIA Stock Price Forecasting with ARCH-GARCH">Peramalan Harga Saham NVIDIA dengan ARCH-GARCH</h3>
+    <p class="pj-d" data-id="Proyek kelompok: memodelkan volatilitas harga penutupan NVIDIA (Jan 2019–Jul 2024, 1.402 observasi) dengan ARIMA(0,0,1)-ARCH(4,0)." data-en="Group project: modeling the volatility of NVIDIA’s closing price (Jan 2019–Jul 2024, 1,402 observations) with ARIMA(0,0,1)-ARCH(4,0).">Proyek kelompok: memodelkan volatilitas harga penutupan NVIDIA (Jan 2019–Jul 2024, 1.402 observasi) dengan ARIMA(0,0,1)-ARCH(4,0).</p>
+    <div class="proj-tags"><em class="pj-lbl" data-id="Alat:" data-en="Tools:">Alat:</em><span>R</span></div>
+    <span class="pj-go"><span data-id="Lihat detail" data-en="View details">Lihat detail</span><b aria-hidden="true">→</b></span>
+   </article>
+   <article class="pj" tabindex="0" role="button" data-open="p-beras" aria-label="Peramalan Harga Beras Premium di Provinsi Lampung dengan ARIMA">
+    <div class="pj-top"><span class="pj-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bar"/></svg></span><span class="pj-yr">2025</span></div>
+    <h3 data-id="Peramalan Harga Beras di Provinsi Lampung dengan ARIMA" data-en="Rice Price Forecasting in Lampung Province with ARIMA">Peramalan Harga Beras di Provinsi Lampung dengan ARIMA</h3>
+    <p class="pj-d" data-id="Model peramalan harga beras Januari–Juni 2025 dari 72 data bulanan BPS (2019–2024) memakai ARIMA(1,2,1), MAPE 2,17%." data-en="Rice price forecasting model for January–June 2025 from 72 monthly BPS records (2019–2024) using ARIMA(1,2,1), MAPE 2.17%.">Model peramalan harga beras Januari–Juni 2025 dari 72 data bulanan BPS (2019–2024) memakai ARIMA(1,2,1), MAPE 2,17%.</p>
+    <div class="proj-tags"><em class="pj-lbl" data-id="Alat:" data-en="Tools:">Alat:</em><span>R</span><span>Excel</span></div>
+    <span class="pj-go"><span data-id="Lihat detail" data-en="View details">Lihat detail</span><b aria-hidden="true">→</b></span>
+   </article>
+   <article class="pj" tabindex="0" role="button" data-open="p-sarima" aria-label="Peramalan Curah Hujan dengan SARIMA dan ARIMA">
+    <div class="pj-top"><span class="pj-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pie"/></svg></span><span class="pj-yr">2026</span></div>
+    <h3 data-id="Peramalan Curah Hujan: Perbandingan SARIMA dan ARIMA" data-en="Rainfall Forecasting: SARIMA vs ARIMA Comparison">Peramalan Curah Hujan: Perbandingan SARIMA dan ARIMA</h3>
+    <p class="pj-d" data-id="Membandingkan ARIMA dan SARIMA untuk meramalkan curah hujan bulanan Lampung dari 84 data BPS (2017–2023). SARIMA lebih akurat." data-en="Compared ARIMA and SARIMA for forecasting monthly rainfall in Lampung from 84 BPS records (2017–2023). SARIMA was more accurate.">Membandingkan ARIMA dan SARIMA untuk meramalkan curah hujan bulanan Lampung dari 84 data BPS (2017–2023). SARIMA lebih akurat.</p>
+    <div class="proj-tags"><em class="pj-lbl" data-id="Alat:" data-en="Tools:">Alat:</em><span>R</span></div>
+    <span class="pj-go"><span data-id="Lihat detail" data-en="View details">Lihat detail</span><b aria-hidden="true">→</b></span>
+   </article>
+   <article class="pj" tabindex="0" role="button" data-open="p-skripsi" aria-label="Prediksi Rata-Rata Temperatur terhadap Kelembapan Menggunakan Metode ARIMAX">
+    <div class="pj-top"><span class="pj-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg></span><span class="pj-yr">2026</span></div>
+    <h3 data-id="Prediksi Kelembapan dengan ARIMAX" data-en="Humidity Forecasting with ARIMAX">Prediksi Kelembapan dengan ARIMAX</h3>
+    <p class="pj-d" data-id="Tugas akhir: meramalkan kelembapan rata-rata Kota Bandar Lampung dengan suhu rata-rata sebagai variabel eksogen (data BMKG), MAPE 1,99%." data-en="Final project: forecasting average humidity in Bandar Lampung using average temperature as an exogenous variable (BMKG data), MAPE 1.99%.">Tugas akhir: meramalkan kelembapan rata-rata Kota Bandar Lampung dengan suhu rata-rata sebagai variabel eksogen (data BMKG), MAPE 1,99%.</p>
+    <div class="proj-tags"><em class="pj-lbl" data-id="Alat:" data-en="Tools:">Alat:</em><span>R</span><span>BMKG</span></div>
+    <span class="pj-go"><span data-id="Lihat detail" data-en="View details">Lihat detail</span><b aria-hidden="true">→</b></span>
+   </article>
+  </div>
+ </section>
+
+ <section id="sertifikasi">
+  <div class="sec-head"><div>
+   <h2 data-id="Pengakuan kompetensi" data-en="Verified credentials">Pengakuan kompetensi</h2>
+   <p data-id="Sertifikat yang mendukung dan menguatkan kompetensi saya di bidang data." data-en="Certificates that support and strengthen my competence in the data field.">Sertifikat yang mendukung dan menguatkan kompetensi saya di bidang data.</p>
+  </div></div>
+  <div class="grid">
+   <article class="pj" tabindex="0" role="button" data-open="c-aslab" aria-label="Sertifikat Asisten Praktikum Analisis Deret Waktu">
+    <div class="pj-thumb"><img src="thumb-asisten-praktikum.png" alt="Pratinjau sertifikat Asisten Praktikum" loading="lazy"></div>
+    <div class="pj-top"><span class="pj-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-file"/></svg></span><span class="pj-yr">2026</span></div>
+    <h3 data-id="Asisten Praktikum Analisis Deret Waktu" data-en="Time Series Analysis Lab Assistant">Asisten Praktikum Analisis Deret Waktu</h3>
+    <p class="pj-d" data-id="Fakultas Sains, Institut Teknologi Sumatera. Semester Genap 2025/2026." data-en="Faculty of Science, Sumatra Institute of Technology. Even Semester 2025/2026.">Fakultas Sains, Institut Teknologi Sumatera. Semester Genap 2025/2026.</p>
+    <span class="pj-go"><span data-id="Lihat sertifikat" data-en="View certificate">Lihat sertifikat</span><b aria-hidden="true">→</b></span>
+   </article>
+   <article class="pj" tabindex="0" role="button" data-open="c-incite" aria-label="Sertifikat ITERA English Proficiency Test">
+    <div class="pj-thumb"><img src="thumb-incite.png" alt="Pratinjau laporan skor InciTe" loading="lazy"></div>
+    <div class="pj-top"><span class="pj-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg></span><span class="pj-yr">2026</span></div>
+    <h3>ITERA English Proficiency Test (InciTe)</h3>
+    <p class="pj-d" data-id="Language Center ITERA. Skor total 617 (Listening 51, Grammar 67, Reading 67)." data-en="ITERA Language Center. Total score 617 (Listening 51, Grammar 67, Reading 67).">Language Center ITERA. Skor total 617 (Listening 51, Grammar 67, Reading 67).</p>
+    <span class="pj-go"><span data-id="Lihat sertifikat" data-en="View certificate">Lihat sertifikat</span><b aria-hidden="true">→</b></span>
+   </article>
+   <article class="pj" tabindex="0" role="button" data-open="c-telkom" aria-label="Sertifikat Praktik Kerja Industri PT Telkom Indonesia">
+    <div class="pj-thumb"><img src="thumb-telkom.png" alt="Pratinjau sertifikat Prakerin Telkom" loading="lazy"></div>
+    <div class="pj-top"><span class="pj-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg></span><span class="pj-yr">2019–2020</span></div>
+    <h3 data-id="Praktik Kerja Industri (Prakerin)" data-en="Industrial Work Practice (Prakerin)">Praktik Kerja Industri (Prakerin)</h3>
+    <p class="pj-d" data-id="PT Telkom Indonesia, Tbk, Bandar Lampung. Predikat Baik Sekali." data-en="PT Telkom Indonesia, Tbk, Bandar Lampung. Predicate: Excellent (Baik Sekali).">PT Telkom Indonesia, Tbk, Bandar Lampung. Predikat Baik Sekali.</p>
+    <span class="pj-go"><span data-id="Lihat sertifikat" data-en="View certificate">Lihat sertifikat</span><b aria-hidden="true">→</b></span>
+   </article>
+  </div>
+
+  <dialog class="pd" id="c-aslab" aria-label="Sertifikat Asisten Praktikum">
+   <div class="pd-in">
+    <div class="pd-top"><h3 data-id="Asisten Praktikum Analisis Deret Waktu" data-en="Time Series Analysis Lab Assistant">Asisten Praktikum Analisis Deret Waktu</h3><button type="button" class="pd-x" data-close aria-label="Tutup / Close">✕</button></div>
+    <iframe class="cert-frame" src="sertifikat-asisten-praktikum.pdf#toolbar=0" title="Sertifikat Asisten Praktikum"></iframe>
+    <div class="pd-btns">
+     <a class="btn p" href="sertifikat-asisten-praktikum.pdf" target="_blank" rel="noopener noreferrer" data-id="Buka PDF di tab baru" data-en="Open PDF in new tab">Buka PDF di tab baru</a>
+     <button type="button" class="btn" data-close data-id="Tutup" data-en="Close">Tutup</button>
+    </div>
+   </div>
+  </dialog>
+
+  <dialog class="pd" id="c-incite" aria-label="Sertifikat InciTe">
+   <div class="pd-in">
+    <div class="pd-top"><h3>ITERA English Proficiency Test (InciTe)</h3><button type="button" class="pd-x" data-close aria-label="Tutup / Close">✕</button></div>
+    <iframe class="cert-frame" src="sertifikat-incite.pdf#toolbar=0" title="Sertifikat InciTe"></iframe>
+    <div class="pd-btns">
+     <a class="btn p" href="sertifikat-incite.pdf" target="_blank" rel="noopener noreferrer" data-id="Buka PDF di tab baru" data-en="Open PDF in new tab">Buka PDF di tab baru</a>
+     <button type="button" class="btn" data-close data-id="Tutup" data-en="Close">Tutup</button>
+    </div>
+   </div>
+  </dialog>
+
+  <dialog class="pd" id="c-telkom" aria-label="Sertifikat Prakerin Telkom">
+   <div class="pd-in">
+    <div class="pd-top"><h3 data-id="Praktik Kerja Industri (Prakerin)" data-en="Industrial Work Practice (Prakerin)">Praktik Kerja Industri (Prakerin)</h3><button type="button" class="pd-x" data-close aria-label="Tutup / Close">✕</button></div>
+    <iframe class="cert-frame" src="sertifikat-telkom.pdf#toolbar=0" title="Sertifikat Prakerin Telkom"></iframe>
+    <div class="pd-btns">
+     <a class="btn p" href="sertifikat-telkom.pdf" target="_blank" rel="noopener noreferrer" data-id="Buka PDF di tab baru" data-en="Open PDF in new tab">Buka PDF di tab baru</a>
+     <button type="button" class="btn" data-close data-id="Tutup" data-en="Close">Tutup</button>
+    </div>
+   </div>
+  </dialog>
+ </section>
+
+ <section id="kontak">
+  <div class="sec-head"><div>
+   <h2 data-id="Mari terhubung" data-en="Let’s connect">Mari terhubung</h2>
+   <p data-id="Terbuka untuk diskusi, kolaborasi, dan peluang baru. Silakan hubungi saya melalui kanal berikut." data-en="Open to discussion, collaboration, and new opportunities. Feel free to reach out through the channels below.">Terbuka untuk diskusi, kolaborasi, dan peluang baru. Silakan hubungi saya melalui kanal berikut.</p>
+  </div></div>
+  <div class="ci">
+ <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bagas230803@gmail.com&su=Halo%20Bagas" target="_blank" rel="noopener noreferrer" aria-label="Email" title="Email">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+ </a>
+ <a href="https://www.linkedin.com/in/muhammadbagaskurnia/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+ </a>
+ <a href="https://github.com/mbgsk23" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+ </a>
+</div>
+ </section>
+</main>
+<footer>© 2026 Muhammad Bagas Kurnia</footer>
+
+<dialog class="pd" id="p-kriging" aria-labelledby="pk-title">
+ <div class="pd-in">
+  <div class="pd-top">
+   <h3 id="pk-title" data-id="Interpolasi Curah Hujan dengan Ordinary Kriging" data-en="Rainfall Interpolation with Ordinary Kriging">Interpolasi Curah Hujan dengan Ordinary Kriging</h3>
+   <button type="button" class="pd-x" data-close aria-label="Tutup / Close">✕</button>
+  </div>
+  <figure class="pd-fig"><img src="peta-kriging.png" alt="Peta interpolasi curah hujan Kabupaten Tulang Bawang Barat, Januari–April 2024" onerror="this.closest('figure').remove()"><figcaption data-id="Peta interpolasi curah hujan Kabupaten Tulang Bawang Barat, Januari–April 2024." data-en="Interpolated rainfall map of Tulang Bawang Barat Regency, January–April 2024.">Peta interpolasi curah hujan Kabupaten Tulang Bawang Barat, Januari–April 2024.</figcaption></figure>
+  <h4 data-id="Masalah" data-en="Problem">Masalah</h4>
+  <p data-id="Data curah hujan hanya tersedia di titik stasiun, sedangkan perencanaan pertanian, pengelolaan air, dan mitigasi bencana membutuhkan gambaran curah hujan untuk seluruh wilayah." data-en="Rainfall data is only available at station points, while agricultural planning, water management, and disaster mitigation need a picture of rainfall across the whole region.">Data curah hujan hanya tersedia di titik stasiun, sedangkan perencanaan pertanian, pengelolaan air, dan mitigasi bencana membutuhkan gambaran curah hujan untuk seluruh wilayah.</p>
+  <h4 data-id="Yang saya kerjakan" data-en="What I did">Yang saya kerjakan</h4>
+  <ul>
+   <li data-id="Mengolah data curah hujan Januari–April 2024 dari 30 stasiun/pos hujan BMKG." data-en="Processed January–April 2024 rainfall data from 30 BMKG rain stations/posts.">Mengolah data curah hujan Januari–April 2024 dari 30 stasiun/pos hujan BMKG.</li>
+   <li data-id="Menganalisis autokorelasi spasial (Indeks Moran) dan membuat variogram untuk melihat struktur spasial data." data-en="Analyzed spatial autocorrelation (Moran’s I) and built a variogram to examine the spatial structure of the data.">Menganalisis autokorelasi spasial (Indeks Moran) dan membuat variogram untuk melihat struktur spasial data.</li>
+   <li data-id="Membandingkan model semivariogram (Gaussian, Linear, Exponential, Spherical) dengan RMSE dan R²; model Gaussian terpilih (R² 0,813)." data-en="Compared semivariogram models (Gaussian, Linear, Exponential, Spherical) using RMSE and R²; the Gaussian model was selected (R² 0.813).">Membandingkan model semivariogram (Gaussian, Linear, Exponential, Spherical) dengan RMSE dan R²; model Gaussian terpilih (R² 0,813).</li>
+   <li data-id="Menghasilkan peta distribusi curah hujan dengan Ordinary Kriging." data-en="Produced a rainfall distribution map using Ordinary Kriging.">Menghasilkan peta distribusi curah hujan dengan Ordinary Kriging.</li>
+  </ul>
+  <h4 data-id="Temuan" data-en="Findings">Temuan</h4>
+  <p data-id="Curah hujan di bagian utara dan tengah wilayah cenderung lebih tinggi dibandingkan bagian selatan." data-en="Rainfall in the northern and central parts of the region tends to be higher than in the south.">Curah hujan di bagian utara dan tengah wilayah cenderung lebih tinggi dibandingkan bagian selatan.</p>
+  <h4 data-id="Alat" data-en="Tools">Alat</h4>
+  <p>Python, QGIS, data BMKG</p>
+  <div class="pd-btns">
+   <a class="btn p" href="paper-kriging.pdf" target="_blank" rel="noopener noreferrer" data-id="Baca paper (PDF)" data-en="Read the paper (PDF)">Baca paper (PDF)</a>
+   <button type="button" class="btn" data-close data-id="Tutup" data-en="Close">Tutup</button>
+  </div>
+ </div>
+</dialog>
+
+<dialog class="pd" id="p-beras" aria-labelledby="pb-title">
+ <div class="pd-in">
+  <div class="pd-top">
+   <h3 id="pb-title" data-id="Peramalan Harga Beras di Provinsi Lampung dengan ARIMA" data-en="Rice Price Forecasting in Lampung Province with ARIMA">Peramalan Harga Beras di Provinsi Lampung dengan ARIMA</h3>
+   <button type="button" class="pd-x" data-close aria-label="Tutup / Close">✕</button>
+  </div>
+  <div class="pd-figs">
+   <figure class="pd-fig"><img src="grafik-harga-beras.jpeg" alt="Plot deret waktu harga beras Provinsi Lampung 2019–2024" onerror="this.closest('figure').remove()"><figcaption data-id="Pergerakan harga beras 2019–2024: tren naik dengan fluktuasi jangka pendek." data-en="Rice price movement 2019–2024: upward trend with short-term fluctuations.">Pergerakan harga beras 2019–2024: tren naik dengan fluktuasi jangka pendek.</figcaption></figure>
+   <figure class="pd-fig"><img src="forecast-beras.jpeg" alt="Grafik peramalan harga beras enam bulan ke depan" onerror="this.closest('figure').remove()"><figcaption data-id="Peramalan 6 bulan ke depan (Januari–Juni 2025) beserta interval kepercayaan." data-en="Six-month forecast (January–June 2025) with confidence intervals.">Peramalan 6 bulan ke depan (Januari–Juni 2025) beserta interval kepercayaan.</figcaption></figure>
+  </div>
+  <h4 data-id="Masalah" data-en="Problem">Masalah</h4>
+  <p data-id="Harga beras memengaruhi daya beli dan inflasi, tetapi pergerakannya sulit diperkirakan. Pemerintah daerah membutuhkan gambaran tren harga untuk mendukung kebijakan pengendalian harga." data-en="Rice prices affect purchasing power and inflation, but their movement is hard to anticipate. Local government needs a view of price trends to support price-control policies.">Harga beras memengaruhi daya beli dan inflasi, tetapi pergerakannya sulit diperkirakan. Pemerintah daerah membutuhkan gambaran tren harga untuk mendukung kebijakan pengendalian harga.</p>
+  <h4 data-id="Yang saya kerjakan" data-en="What I did">Yang saya kerjakan</h4>
+  <ul>
+   <li data-id="Mengolah 72 data bulanan harga beras Provinsi Lampung (2019–2024) dari BPS." data-en="Processed 72 monthly rice price records for Lampung Province (2019–2024) from BPS.">Mengolah 72 data bulanan harga beras Provinsi Lampung (2019–2024) dari BPS.</li>
+   <li data-id="Mengeksplorasi pola data, menguji stasioneritas (ADF), dan melakukan differencing." data-en="Explored data patterns, tested stationarity (ADF), and applied differencing.">Mengeksplorasi pola data, menguji stasioneritas (ADF), dan melakukan differencing.</li>
+   <li data-id="Menentukan orde dari plot ACF/PACF, membandingkan tiga model kandidat dengan AIC, lalu memilih ARIMA(1,2,1)." data-en="Identified orders from ACF/PACF plots, compared three candidate models using AIC, and selected ARIMA(1,2,1).">Menentukan orde dari plot ACF/PACF, membandingkan tiga model kandidat dengan AIC, lalu memilih ARIMA(1,2,1).</li>
+   <li data-id="Menguji residual (normalitas dan white noise) serta mengukur akurasi dengan MAPE." data-en="Tested residuals (normality and white noise) and measured accuracy with MAPE.">Menguji residual (normalitas dan white noise) serta mengukur akurasi dengan MAPE.</li>
+  </ul>
+  <h4 data-id="Hasil" data-en="Results">Hasil</h4>
+  <ul>
+   <li data-id="Harga beras menunjukkan tren naik, terutama sejak awal 2022 hingga puncaknya pada 2024." data-en="Rice prices show an upward trend, especially from early 2022 until the peak in 2024.">Harga beras menunjukkan tren naik, terutama sejak awal 2022 hingga puncaknya pada 2024.</li>
+   <li data-id="Model ARIMA(1,2,1) memiliki AIC terendah dan MAPE sekitar 2,17%." data-en="The ARIMA(1,2,1) model has the lowest AIC and a MAPE of about 2.17%.">Model ARIMA(1,2,1) memiliki AIC terendah dan MAPE sekitar 2,17%.</li>
+   <li data-id="Peramalan Januari–Juni 2025 naik bertahap dari sekitar Rp12.363 menjadi Rp12.581." data-en="The January–June 2025 forecast rises gradually from about Rp12,363 to Rp12,581.">Peramalan Januari–Juni 2025 naik bertahap dari sekitar Rp12.363 menjadi Rp12.581.</li>
+  </ul>
+  <figure class="pd-fig pd-chart">
+   <svg viewBox="0 0 640 296" role="img" aria-label="Grafik peramalan harga beras Januari–Juni 2025 dengan interval 80% dan 95%">
+<line class="ch-grid" x1="62" x2="620" y1="250.0" y2="250.0"/><text class="ch-txt" x="54" y="254.0" text-anchor="end">10.000</text>
+<line class="ch-grid" x1="62" x2="620" y1="204.0" y2="204.0"/><text class="ch-txt" x="54" y="208.0" text-anchor="end">11.000</text>
+<line class="ch-grid" x1="62" x2="620" y1="158.0" y2="158.0"/><text class="ch-txt" x="54" y="162.0" text-anchor="end">12.000</text>
+<line class="ch-grid" x1="62" x2="620" y1="112.0" y2="112.0"/><text class="ch-txt" x="54" y="116.0" text-anchor="end">13.000</text>
+<line class="ch-grid" x1="62" x2="620" y1="66.0" y2="66.0"/><text class="ch-txt" x="54" y="70.0" text-anchor="end">14.000</text>
+<line class="ch-grid" x1="62" x2="620" y1="20.0" y2="20.0"/><text class="ch-txt" x="54" y="24.0" text-anchor="end">15.000</text>
+<polygon class="ch-b95" points="76,171.3 178,189.7 280,204.3 382,216.4 484,226.8 586,236.1 586,26.5 484,39.8 382,54.4 280,70.6 178,89.2 76,111.3"/><polygon class="ch-b80" points="76,160.9 178,172.3 280,181.1 382,188.4 484,194.5 586,199.8 586,62.7 484,72.2 382,82.4 280,93.7 178,106.6 76,121.7"/>
+<polyline class="ch-line" fill="none" points="76,141.3 178,139.4 280,137.4 382,135.4 484,133.3 586,131.3"/>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="25.0" y="10" width="102" height="240"/>
+<line class="ch-guide" x1="76" x2="76" y1="10" y2="250"/>
+<circle class="ch-dot" cx="76" cy="141.3" r="5"/>
+<g class="ch-tip"><rect x="66" y="4" width="160" height="66" rx="8"/>
+<text class="ch-t1" x="76" y="21"><tspan data-id="Jan 2025" data-en="Jan 2025">Jan 2025</tspan></text>
+<text x="76" y="37" data-id="Perkiraan: Rp12.363" data-en="Forecast: Rp12,363">Perkiraan: Rp12.363</text>
+<text class="ch-t2" x="76" y="52" data-id="80%: 11.937–12.789" data-en="80%: 11,937–12,789">80%: 11.937–12.789</text>
+<text class="ch-t2" x="76" y="64" data-id="95%: 11.711–13.015" data-en="95%: 11,711–13,015">95%: 11.711–13.015</text></g></g>
+<text class="ch-txt" x="76" y="274" text-anchor="middle" data-id="Jan" data-en="Jan">Jan</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="127.0" y="10" width="102" height="240"/>
+<line class="ch-guide" x1="178" x2="178" y1="10" y2="250"/>
+<circle class="ch-dot" cx="178" cy="139.4" r="5"/>
+<g class="ch-tip"><rect x="98" y="4" width="160" height="66" rx="8"/>
+<text class="ch-t1" x="108" y="21"><tspan data-id="Feb 2025" data-en="Feb 2025">Feb 2025</tspan></text>
+<text x="108" y="37" data-id="Perkiraan: Rp12.403" data-en="Forecast: Rp12,403">Perkiraan: Rp12.403</text>
+<text class="ch-t2" x="108" y="52" data-id="80%: 11.689–13.117" data-en="80%: 11,689–13,117">80%: 11.689–13.117</text>
+<text class="ch-t2" x="108" y="64" data-id="95%: 11.312–13.495" data-en="95%: 11,312–13,495">95%: 11.312–13.495</text></g></g>
+<text class="ch-txt" x="178" y="274" text-anchor="middle" data-id="Feb" data-en="Feb">Feb</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="229.0" y="10" width="102" height="240"/>
+<line class="ch-guide" x1="280" x2="280" y1="10" y2="250"/>
+<circle class="ch-dot" cx="280" cy="137.4" r="5"/>
+<g class="ch-tip"><rect x="200" y="4" width="160" height="66" rx="8"/>
+<text class="ch-t1" x="210" y="21"><tspan data-id="Mar 2025" data-en="Mar 2025">Mar 2025</tspan></text>
+<text x="210" y="37" data-id="Perkiraan: Rp12.447" data-en="Forecast: Rp12,447">Perkiraan: Rp12.447</text>
+<text class="ch-t2" x="210" y="52" data-id="80%: 11.497–13.397" data-en="80%: 11,497–13,397">80%: 11.497–13.397</text>
+<text class="ch-t2" x="210" y="64" data-id="95%: 10.994–13.900" data-en="95%: 10,994–13,900">95%: 10.994–13.900</text></g></g>
+<text class="ch-txt" x="280" y="274" text-anchor="middle" data-id="Mar" data-en="Mar">Mar</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="331.0" y="10" width="102" height="240"/>
+<line class="ch-guide" x1="382" x2="382" y1="10" y2="250"/>
+<circle class="ch-dot" cx="382" cy="135.4" r="5"/>
+<g class="ch-tip"><rect x="302" y="4" width="160" height="66" rx="8"/>
+<text class="ch-t1" x="312" y="21"><tspan data-id="Apr 2025" data-en="Apr 2025">Apr 2025</tspan></text>
+<text x="312" y="37" data-id="Perkiraan: Rp12.491" data-en="Forecast: Rp12,491">Perkiraan: Rp12.491</text>
+<text class="ch-t2" x="312" y="52" data-id="80%: 11.340–13.643" data-en="80%: 11,340–13,643">80%: 11.340–13.643</text>
+<text class="ch-t2" x="312" y="64" data-id="95%: 10.731–14.252" data-en="95%: 10,731–14,252">95%: 10.731–14.252</text></g></g>
+<text class="ch-txt" x="382" y="274" text-anchor="middle" data-id="Apr" data-en="Apr">Apr</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="433.0" y="10" width="102" height="240"/>
+<line class="ch-guide" x1="484" x2="484" y1="10" y2="250"/>
+<circle class="ch-dot" cx="484" cy="133.3" r="5"/>
+<g class="ch-tip"><rect x="404" y="4" width="160" height="66" rx="8"/>
+<text class="ch-t1" x="414" y="21"><tspan data-id="Mei 2025" data-en="May 2025">Mei 2025</tspan></text>
+<text x="414" y="37" data-id="Perkiraan: Rp12.536" data-en="Forecast: Rp12,536">Perkiraan: Rp12.536</text>
+<text class="ch-t2" x="414" y="52" data-id="80%: 11.207–13.865" data-en="80%: 11,207–13,865">80%: 11.207–13.865</text>
+<text class="ch-t2" x="414" y="64" data-id="95%: 10.504–14.569" data-en="95%: 10,504–14,569">95%: 10.504–14.569</text></g></g>
+<text class="ch-txt" x="484" y="274" text-anchor="middle" data-id="Mei" data-en="May">Mei</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="535.0" y="10" width="102" height="240"/>
+<line class="ch-guide" x1="586" x2="586" y1="10" y2="250"/>
+<circle class="ch-dot" cx="586" cy="131.3" r="5"/>
+<g class="ch-tip"><rect x="460" y="4" width="160" height="66" rx="8"/>
+<text class="ch-t1" x="470" y="21"><tspan data-id="Jun 2025" data-en="Jun 2025">Jun 2025</tspan></text>
+<text x="470" y="37" data-id="Perkiraan: Rp12.581" data-en="Forecast: Rp12,581">Perkiraan: Rp12.581</text>
+<text class="ch-t2" x="470" y="52" data-id="80%: 11.091–14.071" data-en="80%: 11,091–14,071">80%: 11.091–14.071</text>
+<text class="ch-t2" x="470" y="64" data-id="95%: 10.303–14.860" data-en="95%: 10,303–14,860">95%: 10.303–14.860</text></g></g>
+<text class="ch-txt" x="586" y="274" text-anchor="middle" data-id="Jun" data-en="Jun">Jun</text>
+</svg>
+   <div class="ch-leg"><span><i class="l"></i><b data-id="Perkiraan" data-en="Forecast">Perkiraan</b></span><span><i class="b80"></i><b data-id="Interval 80%" data-en="80% interval">Interval 80%</b></span><span><i class="b95"></i><b data-id="Interval 95%" data-en="95% interval">Interval 95%</b></span></div>
+   <figcaption data-id="Rincian peramalan Januari–Juni 2025 (Rp)." data-en="Forecast detail for January–June 2025 (Rp).">Rincian peramalan Januari–Juni 2025 (Rp). Arahkan kursor ke tiap bulan untuk melihat nilainya; interval melebar karena ketidakpastian bertambah untuk bulan yang lebih jauh.</figcaption>
+  </figure>
+  <h4 data-id="Kendala" data-en="Challenges">Kendala</h4>
+  <ul>
+   <li data-id="Data tidak stasioner (tren naik dan varians membesar), sehingga perlu differencing dua kali sebelum dimodelkan." data-en="The data was not stationary (rising trend and growing variance), so it needed two rounds of differencing before modeling.">Data tidak stasioner (tren naik dan varians membesar), sehingga perlu differencing dua kali sebelum dimodelkan.</li>
+   <li data-id="Penentuan orde dari ACF/PACF bersifat tentatif, sehingga beberapa kandidat model harus dibandingkan." data-en="Choosing orders from ACF/PACF is tentative, so several candidate models had to be compared.">Penentuan orde dari ACF/PACF bersifat tentatif, sehingga beberapa kandidat model harus dibandingkan.</li>
+   <li data-id="Residual masih memiliki beberapa pencilan di ujung data." data-en="The residuals still contain a few outliers at the tails.">Residual masih memiliki beberapa pencilan di ujung data.</li>
+   <li data-id="ARIMA hanya akurat untuk jangka pendek dan tidak memasukkan faktor luar seperti musim panen, distribusi, atau kebijakan, sehingga peramalan dibatasi 6 bulan." data-en="ARIMA is only accurate in the short term and does not include external factors such as harvest season, distribution, or policy, so the forecast is limited to 6 months.">ARIMA hanya akurat untuk jangka pendek dan tidak memasukkan faktor luar seperti musim panen, distribusi, atau kebijakan, sehingga peramalan dibatasi 6 bulan.</li>
+  </ul>
+  <h4 data-id="Kesimpulan" data-en="Conclusion">Kesimpulan</h4>
+  <p data-id="ARIMA(1,2,1) mampu menangkap pola harga beras dan menghasilkan peramalan jangka pendek yang cukup akurat, dengan residual yang memenuhi sifat white noise. Hasilnya menunjukkan harga beras cenderung terus naik pada enam bulan ke depan. Pengembangan berikutnya dapat mencoba SARIMA, ARIMAX, atau model machine learning berbasis time series." data-en="ARIMA(1,2,1) captures the rice price pattern and produces fairly accurate short-term forecasts, with residuals that satisfy white noise. The results show rice prices tend to keep rising over the next six months. Future work could try SARIMA, ARIMAX, or time-series machine learning models.">ARIMA(1,2,1) mampu menangkap pola harga beras dan menghasilkan peramalan jangka pendek yang cukup akurat, dengan residual yang memenuhi sifat white noise. Hasilnya menunjukkan harga beras cenderung terus naik pada enam bulan ke depan. Pengembangan berikutnya dapat mencoba SARIMA, ARIMAX, atau model machine learning berbasis time series.</p>
+  <h4 data-id="Alat" data-en="Tools">Alat</h4>
+  <p>R (RStudio), Microsoft Excel, data BPS Provinsi Lampung</p>
+  <div class="pd-btns">
+   <button type="button" class="btn p" data-close data-id="Tutup" data-en="Close">Tutup</button>
+  </div>
+ </div>
+</dialog>
+
+<dialog class="pd" id="p-sarima" aria-labelledby="ps-title">
+ <div class="pd-in">
+  <div class="pd-top">
+   <h3 id="ps-title" data-id="Peramalan Curah Hujan: Perbandingan SARIMA dan ARIMA" data-en="Rainfall Forecasting: SARIMA vs ARIMA Comparison">Peramalan Curah Hujan: Perbandingan SARIMA dan ARIMA</h3>
+   <button type="button" class="pd-x" data-close aria-label="Tutup / Close">✕</button>
+  </div>
+  <div class="pd-figs">
+   <figure class="pd-fig"><img src="grafik-curah-hujan.jpeg" alt="Plot deret waktu curah hujan bulanan Provinsi Lampung 2017–2023" onerror="this.closest('figure').remove()"><figcaption data-id="Curah hujan bulanan 2017–2023 menunjukkan pola musiman yang berulang setiap tahun." data-en="Monthly rainfall 2017–2023 shows a seasonal pattern that repeats every year.">Curah hujan bulanan 2017–2023 menunjukkan pola musiman yang berulang setiap tahun.</figcaption></figure>
+   <figure class="pd-fig"><img src="perbandingan-forecast.jpeg" alt="Perbandingan peramalan 12 bulan model ARIMA dan SARIMA" onerror="this.closest('figure').remove()"><figcaption data-id="Peramalan 12 bulan: SARIMA mengikuti pola musiman, sedangkan ARIMA cenderung datar." data-en="12-month forecast: SARIMA follows the seasonal pattern, while ARIMA tends to be flat.">Peramalan 12 bulan: SARIMA mengikuti pola musiman, sedangkan ARIMA cenderung datar.</figcaption></figure>
+  </div>
+  <h4 data-id="Masalah" data-en="Problem">Masalah</h4>
+  <p data-id="Perubahan iklim membuat pola curah hujan semakin tidak pasti, padahal pertanian dan mitigasi bencana bergantung pada prediksi yang andal. Belum banyak penelitian yang membandingkan ARIMA dan SARIMA secara langsung pada data curah hujan Lampung." data-en="Climate change makes rainfall patterns less certain, while agriculture and disaster mitigation depend on reliable predictions. Few studies directly compare ARIMA and SARIMA on Lampung rainfall data.">Perubahan iklim membuat pola curah hujan semakin tidak pasti, padahal pertanian dan mitigasi bencana bergantung pada prediksi yang andal. Belum banyak penelitian yang membandingkan ARIMA dan SARIMA secara langsung pada data curah hujan Lampung.</p>
+  <h4 data-id="Yang saya kerjakan" data-en="What I did">Yang saya kerjakan</h4>
+  <ul>
+   <li data-id="Mengolah 84 data curah hujan bulanan Provinsi Lampung (Januari 2017–Desember 2023) dari BPS." data-en="Processed 84 monthly rainfall records for Lampung Province (January 2017–December 2023) from BPS.">Mengolah 84 data curah hujan bulanan Provinsi Lampung (Januari 2017–Desember 2023) dari BPS.</li>
+   <li data-id="Menguji stasioneritas dengan ADF dan mengidentifikasi orde dari plot ACF/PACF." data-en="Tested stationarity with ADF and identified orders from ACF/PACF plots.">Menguji stasioneritas dengan ADF dan mengidentifikasi orde dari plot ACF/PACF.</li>
+   <li data-id="Membangun dan membandingkan kandidat model ARIMA dan SARIMA dengan AIC/BIC, lalu memilih ARIMA(1,0,1) dan SARIMA(1,0,0)(1,0,1)[12]." data-en="Built and compared ARIMA and SARIMA candidates using AIC/BIC, then selected ARIMA(1,0,1) and SARIMA(1,0,0)(1,0,1)[12].">Membangun dan membandingkan kandidat model ARIMA dan SARIMA dengan AIC/BIC, lalu memilih ARIMA(1,0,1) dan SARIMA(1,0,0)(1,0,1)[12].</li>
+   <li data-id="Memeriksa residual, mengevaluasi dengan RMSE dan MAE, serta meramalkan 12 bulan ke depan." data-en="Checked residuals, evaluated with RMSE and MAE, and forecast 12 months ahead.">Memeriksa residual, mengevaluasi dengan RMSE dan MAE, serta meramalkan 12 bulan ke depan.</li>
+  </ul>
+  <h4 data-id="Hasil" data-en="Results">Hasil</h4>
+  <ul>
+   <li data-id="Curah hujan Lampung berpola musiman jelas: tinggi pada Januari–Maret dan rendah pada Juli–September (rata-rata sekitar 157 mm per bulan)." data-en="Lampung rainfall has a clear seasonal pattern: high in January–March and low in July–September (about 157 mm per month on average).">Curah hujan Lampung berpola musiman jelas: tinggi pada Januari–Maret dan rendah pada Juli–September (rata-rata sekitar 157 mm per bulan).</li>
+   <li data-id="SARIMA(1,0,0)(1,0,1)[12] mencatat RMSE 77,54 dan MAE 63,39, lebih rendah sekitar 13% dan 11,3% dibanding ARIMA(1,0,1)." data-en="SARIMA(1,0,0)(1,0,1)[12] recorded RMSE 77.54 and MAE 63.39, about 13% and 11.3% lower than ARIMA(1,0,1).">SARIMA(1,0,0)(1,0,1)[12] mencatat RMSE 77,54 dan MAE 63,39, lebih rendah sekitar 13% dan 11,3% dibanding ARIMA(1,0,1).</li>
+   <li data-id="AIC dan BIC SARIMA juga lebih rendah (988,96 dan 1001,12 dibanding 998,76 dan 1008,07)." data-en="SARIMA also has lower AIC and BIC (988.96 and 1,001.12 versus 998.76 and 1,008.07).">AIC dan BIC SARIMA juga lebih rendah (988,96 dan 1001,12 dibanding 998,76 dan 1008,07).</li>
+  </ul>
+  <figure class="pd-fig pd-chart">
+   <svg viewBox="0 0 640 296" role="img" aria-label="Perbandingan RMSE dan MAE model ARIMA dan SARIMA">
+<line class="ch-grid" x1="62" x2="620" y1="250" y2="250"/><text class="ch-txt" x="54" y="254" text-anchor="end">0</text>
+<line class="ch-grid" x1="62" x2="620" y1="200" y2="200"/><text class="ch-txt" x="54" y="204" text-anchor="end">25</text>
+<line class="ch-grid" x1="62" x2="620" y1="150" y2="150"/><text class="ch-txt" x="54" y="154" text-anchor="end">50</text>
+<line class="ch-grid" x1="62" x2="620" y1="100" y2="100"/><text class="ch-txt" x="54" y="104" text-anchor="end">75</text>
+<line class="ch-grid" x1="62" x2="620" y1="50" y2="50"/><text class="ch-txt" x="54" y="54" text-anchor="end">100</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="85" y="44" width="230" height="206"/>
+<rect class="bar bar-a" x="122" y="71.76" width="70" height="178.24" rx="6"/>
+<rect class="bar bar-s" x="208" y="94.92" width="70" height="155.08" rx="6" style="animation-delay:.12s"/>
+<text class="ch-val" x="157" y="65.76">89,12</text>
+<text class="ch-val" x="243" y="88.92">77,54</text>
+<g class="ch-tip"><rect x="85" y="2" width="230" height="38" rx="8"/>
+<text class="ch-t1" x="95" y="17" data-id="RMSE: ARIMA 89,12 → SARIMA 77,54" data-en="RMSE: ARIMA 89.12 → SARIMA 77.54">RMSE: ARIMA 89,12 → SARIMA 77,54</text>
+<text class="ch-t2" x="95" y="32" data-id="SARIMA lebih rendah ±13,0%" data-en="SARIMA is lower by ~13.0%">SARIMA lebih rendah ±13,0%</text></g></g>
+<text class="ch-txt" x="200" y="274" text-anchor="middle">RMSE</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="365" y="44" width="230" height="206"/>
+<rect class="bar bar-a" x="402" y="107.1" width="70" height="142.9" rx="6"/>
+<rect class="bar bar-s" x="488" y="123.22" width="70" height="126.78" rx="6" style="animation-delay:.12s"/>
+<text class="ch-val" x="437" y="101.1">71,45</text>
+<text class="ch-val" x="523" y="117.22">63,39</text>
+<g class="ch-tip"><rect x="365" y="2" width="230" height="38" rx="8"/>
+<text class="ch-t1" x="375" y="17" data-id="MAE: ARIMA 71,45 → SARIMA 63,39" data-en="MAE: ARIMA 71.45 → SARIMA 63.39">MAE: ARIMA 71,45 → SARIMA 63,39</text>
+<text class="ch-t2" x="375" y="32" data-id="SARIMA lebih rendah ±11,3%" data-en="SARIMA is lower by ~11.3%">SARIMA lebih rendah ±11,3%</text></g></g>
+<text class="ch-txt" x="480" y="274" text-anchor="middle">MAE</text>
+</svg>
+   <div class="ch-leg"><span><i class="la"></i><b>ARIMA(1,0,1)</b></span><span><i class="ls"></i><b>SARIMA(1,0,0)(1,0,1)[12]</b></span></div>
+   <figcaption data-id="Perbandingan error model (makin rendah makin baik)." data-en="Model error comparison (lower is better).">Perbandingan error model (makin rendah makin baik). Arahkan kursor ke tiap metrik untuk melihat selisihnya.</figcaption>
+  </figure>
+  <h4 data-id="Kendala" data-en="Challenges">Kendala</h4>
+  <ul>
+   <li data-id="Model hanya memakai data curah hujan, tanpa faktor eksternal seperti suhu, kelembapan, atau fenomena ENSO." data-en="The models use rainfall data only, without external factors such as temperature, humidity, or ENSO.">Model hanya memakai data curah hujan, tanpa faktor eksternal seperti suhu, kelembapan, atau fenomena ENSO.</li>
+   <li data-id="Kedua model bersifat linier, sehingga kurang optimal untuk anomali iklim ekstrem." data-en="Both models are linear, so they are less optimal for extreme climate anomalies.">Kedua model bersifat linier, sehingga kurang optimal untuk anomali iklim ekstrem.</li>
+   <li data-id="Data relatif pendek (84 bulan), sehingga hasil terbatas pada pola musiman jangka pendek." data-en="The data is relatively short (84 months), so results are limited to short-term seasonal patterns.">Data relatif pendek (84 bulan), sehingga hasil terbatas pada pola musiman jangka pendek.</li>
+   <li data-id="Harus membandingkan banyak kandidat orde dan memakai metrik yang sama agar perbandingan kedua model adil." data-en="Many candidate orders had to be compared, using the same metrics so the two models are compared fairly.">Harus membandingkan banyak kandidat orde dan memakai metrik yang sama agar perbandingan kedua model adil.</li>
+  </ul>
+  <h4 data-id="Kesimpulan" data-en="Conclusion">Kesimpulan</h4>
+  <p data-id="SARIMA lebih efektif daripada ARIMA untuk peramalan curah hujan bulanan di Lampung karena mampu menangkap pola musiman tahunan. ARIMA tetap berguna sebagai model dasar (baseline). Hasilnya dapat mendukung perencanaan waktu tanam, pengelolaan irigasi, dan mitigasi bencana hidrometeorologis. Pengembangan berikutnya dapat memakai SARIMAX, variabel eksogen, atau pendekatan seperti LSTM dan Prophet." data-en="SARIMA is more effective than ARIMA for forecasting monthly rainfall in Lampung because it captures the annual seasonal pattern. ARIMA remains useful as a baseline. The results can support planting-time planning, irrigation management, and hydrometeorological disaster mitigation. Future work could use SARIMAX, exogenous variables, or approaches such as LSTM and Prophet.">SARIMA lebih efektif daripada ARIMA untuk peramalan curah hujan bulanan di Lampung karena mampu menangkap pola musiman tahunan. ARIMA tetap berguna sebagai model dasar (baseline). Hasilnya dapat mendukung perencanaan waktu tanam, pengelolaan irigasi, dan mitigasi bencana hidrometeorologis. Pengembangan berikutnya dapat memakai SARIMAX, variabel eksogen, atau pendekatan seperti LSTM dan Prophet.</p>
+  <h4 data-id="Alat" data-en="Tools">Alat</h4>
+  <p>R, data BPS Provinsi Lampung</p>
+  <div class="pd-btns">
+   <button type="button" class="btn p" data-close data-id="Tutup" data-en="Close">Tutup</button>
+  </div>
+ </div>
+</dialog>
+
+<dialog class="pd" id="p-nvda" aria-labelledby="pn-title">
+ <div class="pd-in">
+  <div class="pd-top">
+   <h3 id="pn-title" data-id="Peramalan Harga Saham NVIDIA dengan ARCH-GARCH" data-en="NVIDIA Stock Price Forecasting with ARCH-GARCH">Peramalan Harga Saham NVIDIA dengan ARCH-GARCH</h3>
+   <button type="button" class="pd-x" data-close aria-label="Tutup / Close">✕</button>
+  </div>
+  <div class="pd-figs">
+   <figure class="pd-fig"><img src="grafik-nvda.png" alt="Grafik harga saham NVIDIA Januari 2019–Juli 2024" onerror="this.closest('figure').remove()"><figcaption data-id="Harga saham NVIDIA Januari 2019–Juli 2024: kenaikan tajam sejak pertengahan 2023." data-en="NVIDIA stock price, January 2019–July 2024: a sharp rise since mid-2023.">Harga saham NVIDIA Januari 2019–Juli 2024: kenaikan tajam sejak pertengahan 2023.</figcaption></figure>
+   <figure class="pd-fig"><img src="forecast-nvda.png" alt="Hasil peramalan return saham NVIDIA dengan model ARCH" onerror="this.closest('figure').remove()"><figcaption data-id="Peramalan return dengan model ARCH beserta interval kepercayaan 95%." data-en="Return forecast from the ARCH model with 95% confidence intervals.">Peramalan return dengan model ARCH beserta interval kepercayaan 95%.</figcaption></figure>
+  </div>
+  <h4 data-id="Masalah" data-en="Problem">Masalah</h4>
+  <p data-id="Harga saham teknologi seperti NVIDIA sangat sensitif terhadap sentimen pasar sehingga volatilitasnya sulit diprediksi. Investor membutuhkan gambaran risiko, sementara kajian volatilitas saham teknologi multinasional dengan pendekatan ARCH-GARCH masih terbatas." data-en="Technology stocks such as NVIDIA are highly sensitive to market sentiment, so their volatility is hard to predict. Investors need a view of risk, while studies of multinational tech-stock volatility using ARCH-GARCH remain limited.">Harga saham teknologi seperti NVIDIA sangat sensitif terhadap sentimen pasar sehingga volatilitasnya sulit diprediksi. Investor membutuhkan gambaran risiko, sementara kajian volatilitas saham teknologi multinasional dengan pendekatan ARCH-GARCH masih terbatas.</p>
+  <h4 data-id="Yang saya kerjakan" data-en="What I did">Yang saya kerjakan</h4>
+  <ul>
+   <li data-id="Mengerjakan proyek kelompok (Kelompok 08, mata kuliah Analisis Deret Waktu) dengan data harga penutupan NVIDIA (NVDA) dari Yahoo Finance, Januari 2019–Juli 2024 (1.402 observasi)." data-en="Worked on a group project (Group 08, Time Series Analysis course) using NVIDIA (NVDA) closing prices from Yahoo Finance, January 2019–July 2024 (1,402 observations).">Mengerjakan proyek kelompok (Kelompok 08, mata kuliah Analisis Deret Waktu) dengan data harga penutupan NVIDIA (NVDA) dari Yahoo Finance, Januari 2019–Juli 2024 (1.402 observasi).</li>
+   <li data-id="Menghitung return harian, menguji stasioneritas dengan ADF (p-value 0,01), lalu memilih ARIMA(0,0,1) berdasarkan AIC (5613,82 dibanding 5613,86 untuk ARIMA(1,0,0))." data-en="Computed daily returns, tested stationarity with ADF (p-value 0.01), then selected ARIMA(0,0,1) by AIC (5,613.82 versus 5,613.86 for ARIMA(1,0,0)).">Menghitung return harian, menguji stasioneritas dengan ADF (p-value 0,01), lalu memilih ARIMA(0,0,1) berdasarkan AIC (5613,82 dibanding 5613,86 untuk ARIMA(1,0,0)).</li>
+   <li data-id="Menguji efek heteroskedastisitas dengan ARCH-LM (χ² = 1384,6; p-value < 2,2×10⁻¹⁶), lalu membandingkan ARCH(1) sampai ARCH(4) dengan AIC dan BIC." data-en="Tested for heteroskedasticity with ARCH-LM (χ² = 1,384.6; p-value < 2.2×10⁻¹⁶), then compared ARCH(1) to ARCH(4) using AIC and BIC.">Menguji efek heteroskedastisitas dengan ARCH-LM (χ² = 1384,6; p-value &lt; 2,2×10⁻¹⁶), lalu membandingkan ARCH(1) sampai ARCH(4) dengan AIC dan BIC.</li>
+   <li data-id="Memeriksa residual dengan Q-Q plot, meramalkan 20 langkah ke depan (Agustus 2024), dan mengevaluasi hasilnya dengan MAPE." data-en="Checked residuals with a Q-Q plot, forecast 20 steps ahead (August 2024), and evaluated the results with MAPE.">Memeriksa residual dengan Q-Q plot, meramalkan 20 langkah ke depan (Agustus 2024), dan mengevaluasi hasilnya dengan MAPE.</li>
+  </ul>
+  <h4 data-id="Hasil" data-en="Results">Hasil</h4>
+  <ul>
+   <li data-id="Return harian rata-rata sekitar 0,003 dengan skewness positif (0,37) dan kurtosis 4,36 (leptokurtik)." data-en="Daily returns average about 0.003 with positive skewness (0.37) and kurtosis of 4.36 (leptokurtic).">Return harian rata-rata sekitar 0,003 dengan skewness positif (0,37) dan kurtosis 4,36 (leptokurtik).</li>
+   <li data-id="ARIMA(0,0,1)-ARCH(4,0) terpilih karena AIC (−4,080112) dan BIC (−4,053921) terkecil." data-en="ARIMA(0,0,1)-ARCH(4,0) was selected for having the lowest AIC (−4.080112) and BIC (−4.053921).">ARIMA(0,0,1)-ARCH(4,0) terpilih karena AIC (−4,080112) dan BIC (−4,053921) terkecil.</li>
+   <li data-id="Q-Q plot menunjukkan residual mendekati distribusi normal." data-en="The Q-Q plot shows residuals close to a normal distribution.">Q-Q plot menunjukkan residual mendekati distribusi normal.</li>
+   <li data-id="Ramalan return stabil di sekitar nol dengan interval yang melebar; MAPE 1,7956 menunjukkan model belum cukup akurat." data-en="The return forecast stays stable near zero with widening intervals; a MAPE of 1.7956 shows the model is not yet accurate enough.">Ramalan return stabil di sekitar nol dengan interval yang melebar; MAPE 1,7956 menunjukkan model belum cukup akurat.</li>
+  </ul>
+  <figure class="pd-fig pd-chart">
+   <svg viewBox="0 0 640 296" role="img" aria-label="Perbandingan AIC model ARCH(1,0) sampai ARCH(4,0)">
+<line class="ch-grid" x1="62" x2="620" y1="250" y2="250"/><text class="ch-txt" x="54" y="254" text-anchor="end">−4,09</text>
+<line class="ch-grid" x1="62" x2="620" y1="190" y2="190"/><text class="ch-txt" x="54" y="194" text-anchor="end">−4,07</text>
+<line class="ch-grid" x1="62" x2="620" y1="130" y2="130"/><text class="ch-txt" x="54" y="134" text-anchor="end">−4,05</text>
+<line class="ch-grid" x1="62" x2="620" y1="70" y2="70"/><text class="ch-txt" x="54" y="74" text-anchor="end">−4,03</text>
+<polyline class="ch-line" fill="none" points="120,58.4 260,159.5 400,158.1 540,220.3"/>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="50" y="10" width="140" height="240"/>
+<line class="ch-guide" x1="120" x2="120" y1="10" y2="250"/>
+<circle class="ch-dot" cx="120" cy="58.4" r="5"/>
+<g class="ch-tip"><rect x="25" y="4" width="190" height="40" rx="8"/>
+<text class="ch-t1" x="35" y="21">ARCH(1,0)</text>
+<text class="ch-t2" x="35" y="36" data-id="AIC −4,026119 · BIC −4,011153" data-en="AIC −4.026119 · BIC −4.011153">AIC −4,026119 · BIC −4,011153</text></g></g>
+<text class="ch-txt" x="120" y="274" text-anchor="middle">ARCH(1,0)</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="190" y="10" width="140" height="240"/>
+<line class="ch-guide" x1="260" x2="260" y1="10" y2="250"/>
+<circle class="ch-dot" cx="260" cy="159.5" r="5"/>
+<g class="ch-tip"><rect x="165" y="4" width="190" height="40" rx="8"/>
+<text class="ch-t1" x="175" y="21">ARCH(2,0)</text>
+<text class="ch-t2" x="175" y="36" data-id="AIC −4,059839 · BIC −4,041131" data-en="AIC −4.059839 · BIC −4.041131">AIC −4,059839 · BIC −4,041131</text></g></g>
+<text class="ch-txt" x="260" y="274" text-anchor="middle">ARCH(2,0)</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="330" y="10" width="140" height="240"/>
+<line class="ch-guide" x1="400" x2="400" y1="10" y2="250"/>
+<circle class="ch-dot" cx="400" cy="158.1" r="5"/>
+<g class="ch-tip"><rect x="305" y="4" width="190" height="40" rx="8"/>
+<text class="ch-t1" x="315" y="21">ARCH(3,0)</text>
+<text class="ch-t2" x="315" y="36" data-id="AIC −4,059362 · BIC −4,036912" data-en="AIC −4.059362 · BIC −4.036912">AIC −4,059362 · BIC −4,036912</text></g></g>
+<text class="ch-txt" x="400" y="274" text-anchor="middle">ARCH(3,0)</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="470" y="10" width="140" height="240"/>
+<line class="ch-guide" x1="540" x2="540" y1="10" y2="250"/>
+<circle class="ch-dot" cx="540" cy="220.3" r="5"/>
+<g class="ch-tip"><rect x="445" y="4" width="190" height="40" rx="8"/>
+<text class="ch-t1" x="455" y="21" data-id="ARCH(4,0) — terpilih" data-en="ARCH(4,0) — selected">ARCH(4,0) — terpilih</text>
+<text class="ch-t2" x="455" y="36" data-id="AIC −4,080112 · BIC −4,053921" data-en="AIC −4.080112 · BIC −4.053921">AIC −4,080112 · BIC −4,053921</text></g></g>
+<text class="ch-txt" x="540" y="274" text-anchor="middle">ARCH(4,0)</text>
+</svg>
+   <div class="ch-leg"><span><i class="l"></i><b>AIC</b></span></div>
+   <figcaption data-id="AIC model ARCH(1,0) sampai ARCH(4,0)." data-en="AIC of ARCH(1,0) to ARCH(4,0).">AIC model ARCH(1,0) sampai ARCH(4,0) (makin rendah makin baik). Arahkan kursor ke tiap model untuk melihat AIC dan BIC-nya.</figcaption>
+  </figure>
+  <h4 data-id="Kendala" data-en="Challenges">Kendala</h4>
+  <ul>
+   <li data-id="MAPE 1,7956 menunjukkan kesalahan prediksi yang cukup besar, sehingga model belum mampu memprediksi dinamika harian dengan baik." data-en="A MAPE of 1.7956 shows a fairly large prediction error, so the model cannot yet predict daily dynamics well.">MAPE 1,7956 menunjukkan kesalahan prediksi yang cukup besar, sehingga model belum mampu memprediksi dinamika harian dengan baik.</li>
+   <li data-id="Ramalan return cenderung halus dan kurang responsif terhadap perubahan mendadak, misalnya penurunan tajam pada 5 Agustus 2024." data-en="The return forecast is smooth and not very responsive to sudden changes, such as the sharp drop on August 5, 2024.">Ramalan return cenderung halus dan kurang responsif terhadap perubahan mendadak, misalnya penurunan tajam pada 5 Agustus 2024.</li>
+   <li data-id="Model terbatas pada ARCH dan GARCH, tanpa EGARCH atau TGARCH, serta tanpa faktor fundamental atau makroekonomi." data-en="The models are limited to ARCH and GARCH, without EGARCH or TGARCH, and without fundamental or macroeconomic factors.">Model terbatas pada ARCH dan GARCH, tanpa EGARCH atau TGARCH, serta tanpa faktor fundamental atau makroekonomi.</li>
+  </ul>
+  <h4 data-id="Kesimpulan" data-en="Conclusion">Kesimpulan</h4>
+  <p data-id="ARIMA(0,0,1)-ARCH(4,0) adalah konfigurasi terbaik berdasarkan AIC, tetapi akurasi prediksinya masih terbatas. Pengembangan berikutnya dapat mencoba EGARCH dan TGARCH, menambahkan data fundamental dan makroekonomi, atau mengombinasikan beberapa model." data-en="ARIMA(0,0,1)-ARCH(4,0) is the best configuration by AIC, but its predictive accuracy is still limited. Future work could try EGARCH and TGARCH, add fundamental and macroeconomic data, or combine several models.">ARIMA(0,0,1)-ARCH(4,0) adalah konfigurasi terbaik berdasarkan AIC, tetapi akurasi prediksinya masih terbatas. Pengembangan berikutnya dapat mencoba EGARCH dan TGARCH, menambahkan data fundamental dan makroekonomi, atau mengombinasikan beberapa model.</p>
+  <h4 data-id="Alat" data-en="Tools">Alat</h4>
+  <p>R (rugarch, fGarch), data Yahoo Finance</p>
+  <div class="pd-btns">
+   <button type="button" class="btn p" data-close data-id="Tutup" data-en="Close">Tutup</button>
+  </div>
+ </div>
+</dialog>
+
+<dialog class="pd" id="p-skripsi" aria-labelledby="pt-title">
+ <div class="pd-in">
+  <div class="pd-top">
+   <h3 id="pt-title" data-id="Prediksi Rata-Rata Temperatur terhadap Kelembapan Menggunakan Metode ARIMAX" data-en="Predicting Humidity from Average Temperature Using ARIMAX">Prediksi Rata-Rata Temperatur terhadap Kelembapan Menggunakan Metode ARIMAX</h3>
+   <button type="button" class="pd-x" data-close aria-label="Tutup / Close">✕</button>
+  </div>
+  <div class="pd-figs">
+   <figure class="pd-fig"><img src="grafik-rh-bulanan.png" alt="Plot kelembapan rata-rata bulanan Kota Bandar Lampung" onerror="this.closest('figure').remove()"><figcaption data-id="Kelembapan rata-rata bulanan (RH_AVG) hasil agregasi data harian BMKG." data-en="Monthly average humidity (RH_AVG) aggregated from daily BMKG data.">Kelembapan rata-rata bulanan (RH_AVG) hasil agregasi data harian BMKG.</figcaption></figure>
+   <figure class="pd-fig"><img src="forecast-arimax.png" alt="Plot hasil peramalan kelembapan dengan ARIMAX" onerror="this.closest('figure').remove()"><figcaption data-id="Peramalan RH_AVG Oktober–Desember 2025 dengan ARIMAX(0,0,1)." data-en="RH_AVG forecast for October–December 2025 using ARIMAX(0,0,1).">Peramalan RH_AVG Oktober–Desember 2025 dengan ARIMAX(0,0,1).</figcaption></figure>
+  </div>
+  <h4 data-id="Masalah" data-en="Problem">Masalah</h4>
+  <p data-id="Kelembapan udara dipengaruhi kondisi meteorologi di sekitarnya, termasuk temperatur. Karena itu dibutuhkan metode peramalan yang memperhitungkan faktor eksternal tersebut agar hasilnya lebih akurat." data-en="Air humidity is influenced by surrounding meteorological conditions, including temperature. A forecasting method that accounts for this external factor is therefore needed for more accurate results.">Kelembapan udara dipengaruhi kondisi meteorologi di sekitarnya, termasuk temperatur. Karena itu dibutuhkan metode peramalan yang memperhitungkan faktor eksternal tersebut agar hasilnya lebih akurat.</p>
+  <h4 data-id="Yang saya kerjakan" data-en="What I did">Yang saya kerjakan</h4>
+  <ul>
+   <li data-id="Mengolah data harian BMKG (RH_AVG dan TAVG), mengisi 66 nilai hilang RH_AVG dan 72 nilai hilang TAVG dengan interpolasi linear, lalu mengagregasi menjadi rata-rata bulanan (September 2020–Desember 2025: 61 data latih dan 3 data uji)." data-en="Processed daily BMKG data (RH_AVG and TAVG), filled 66 missing RH_AVG and 72 missing TAVG values with linear interpolation, then aggregated to monthly averages (September 2020–December 2025: 61 training and 3 test observations).">Mengolah data harian BMKG (RH_AVG dan TAVG), mengisi 66 nilai hilang RH_AVG dan 72 nilai hilang TAVG dengan interpolasi linear, lalu mengagregasi menjadi rata-rata bulanan (September 2020–Desember 2025: 61 data latih dan 3 data uji).</li>
+   <li data-id="Menguji hubungan TAVG dan RH_AVG dengan korelasi Pearson, serta menguji stasioneritas ragam (Box-Cox) dan rata-rata (ADF)." data-en="Tested the TAVG–RH_AVG relationship with Pearson correlation, and tested variance (Box-Cox) and mean (ADF) stationarity.">Menguji hubungan TAVG dan RH_AVG dengan korelasi Pearson, serta menguji stasioneritas ragam (Box-Cox) dan rata-rata (ADF).</li>
+   <li data-id="Mengidentifikasi kandidat orde dari ACF/PACF, mengestimasi parameter, lalu memeriksa residual dengan uji Ljung–Box dan Kolmogorov–Smirnov." data-en="Identified candidate orders from ACF/PACF, estimated parameters, then checked residuals with the Ljung–Box and Kolmogorov–Smirnov tests.">Mengidentifikasi kandidat orde dari ACF/PACF, mengestimasi parameter, lalu memeriksa residual dengan uji Ljung–Box dan Kolmogorov–Smirnov.</li>
+   <li data-id="Membandingkan model ARIMAX(1,0,0) dan ARIMAX(0,0,1) dengan AIC, meramalkan Oktober–Desember 2025, dan mengevaluasi dengan MAPE." data-en="Compared ARIMAX(1,0,0) and ARIMAX(0,0,1) by AIC, forecast October–December 2025, and evaluated with MAPE.">Membandingkan model ARIMAX(1,0,0) dan ARIMAX(0,0,1) dengan AIC, meramalkan Oktober–Desember 2025, dan mengevaluasi dengan MAPE.</li>
+  </ul>
+  <h4 data-id="Hasil" data-en="Results">Hasil</h4>
+  <ul>
+   <li data-id="TAVG dan RH_AVG berkorelasi negatif signifikan (r = −0,2696; p-value 0,0356): suhu naik, kelembapan cenderung turun." data-en="TAVG and RH_AVG are significantly negatively correlated (r = −0.2696; p-value 0.0356): as temperature rises, humidity tends to fall.">TAVG dan RH_AVG berkorelasi negatif signifikan (r = −0,2696; p-value 0,0356): suhu naik, kelembapan cenderung turun.</li>
+   <li data-id="Kedua variabel stasioner (ADF p-value 0,0167 untuk RH_AVG dan 0,0361 untuk TAVG), sehingga tidak perlu differencing." data-en="Both variables are stationary (ADF p-value 0.0167 for RH_AVG and 0.0361 for TAVG), so no differencing was needed.">Kedua variabel stasioner (ADF p-value 0,0167 untuk RH_AVG dan 0,0361 untuk TAVG), sehingga tidak perlu differencing.</li>
+   <li data-id="ARIMAX(0,0,1) terpilih dengan AIC terendah (237,04 dibanding 237,86); residual memenuhi white noise (Ljung–Box p-value 0,6978) dan normal (KS p-value 0,8854)." data-en="ARIMAX(0,0,1) was selected with the lowest AIC (237.04 versus 237.86); residuals satisfy white noise (Ljung–Box p-value 0.6978) and normality (KS p-value 0.8854).">ARIMAX(0,0,1) terpilih dengan AIC terendah (237,04 dibanding 237,86); residual memenuhi white noise (Ljung–Box p-value 0,6978) dan normal (KS p-value 0,8854).</li>
+   <li data-id="Persamaan model: Ŷt = 117,71573 − 1,27121·TAVG + 0,36815·εt−1. MAPE 1,99% (kategori sangat baik), dan seluruh nilai aktual berada dalam interval 95%." data-en="Model equation: Ŷt = 117.71573 − 1.27121·TAVG + 0.36815·εt−1. MAPE 1.99% (very good category), and all actual values fall within the 95% interval.">Persamaan model: Ŷt = 117,71573 − 1,27121·TAVG + 0,36815·εt−1. MAPE 1,99% (kategori sangat baik), dan seluruh nilai aktual berada dalam interval 95%.</li>
+  </ul>
+  <figure class="pd-fig pd-chart">
+   <svg viewBox="0 0 640 296" role="img" aria-label="Perbandingan nilai aktual dan peramalan kelembapan Oktober–Desember 2025 dengan interval 95%">
+<line class="ch-grid" x1="62" x2="620" y1="250" y2="250"/><text class="ch-txt" x="54" y="254" text-anchor="end">76</text>
+<line class="ch-grid" x1="62" x2="620" y1="192.5" y2="192.5"/><text class="ch-txt" x="54" y="196.5" text-anchor="end">79</text>
+<line class="ch-grid" x1="62" x2="620" y1="135" y2="135"/><text class="ch-txt" x="54" y="139" text-anchor="end">82</text>
+<line class="ch-grid" x1="62" x2="620" y1="77.5" y2="77.5"/><text class="ch-txt" x="54" y="81.5" text-anchor="end">85</text>
+<line class="ch-grid" x1="62" x2="620" y1="20" y2="20"/><text class="ch-txt" x="54" y="24" text-anchor="end">88</text>
+<polygon class="ch-b95" points="140,81.8 320,86.0 500,75.8 500,204.7 320,214.9 140,202.8"/>
+<polyline class="ch-line" fill="none" points="140,142.3 320,150.4 500,140.2"/>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="50" y="10" width="180" height="240"/>
+<line class="ch-guide" x1="140" x2="140" y1="10" y2="250"/>
+<circle class="ch-dot" cx="140" cy="142.3" r="5"/>
+<circle cx="140" cy="109.7" r="5" style="fill:var(--accent);stroke:var(--accent)"/>
+<g class="ch-tip"><rect x="60" y="4" width="190" height="66" rx="8"/>
+<text class="ch-t1" x="70" y="21" data-id="Okt 2025" data-en="Oct 2025">Okt 2025</text>
+<text x="70" y="37" data-id="Aktual: 83,32" data-en="Actual: 83.32">Aktual: 83,32</text>
+<text class="ch-t2" x="70" y="52" data-id="Perkiraan: 81,618" data-en="Forecast: 81.618">Perkiraan: 81,618</text>
+<text class="ch-t2" x="70" y="64" data-id="95%: 78,462–84,775" data-en="95%: 78.462–84.775">95%: 78,462–84,775</text></g></g>
+<text class="ch-txt" x="140" y="274" text-anchor="middle" data-id="Okt" data-en="Oct">Okt</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="230" y="10" width="180" height="240"/>
+<line class="ch-guide" x1="320" x2="320" y1="10" y2="250"/>
+<circle class="ch-dot" cx="320" cy="150.4" r="5"/>
+<circle cx="320" cy="130.6" r="5" style="fill:var(--accent);stroke:var(--accent)"/>
+<g class="ch-tip"><rect x="225" y="4" width="190" height="66" rx="8"/>
+<text class="ch-t1" x="235" y="21" data-id="Nov 2025" data-en="Nov 2025">Nov 2025</text>
+<text x="235" y="37" data-id="Aktual: 82,23" data-en="Actual: 82.23">Aktual: 82,23</text>
+<text class="ch-t2" x="235" y="52" data-id="Perkiraan: 81,194" data-en="Forecast: 81.194">Perkiraan: 81,194</text>
+<text class="ch-t2" x="235" y="64" data-id="95%: 77,830–84,558" data-en="95%: 77.830–84.558">95%: 77,830–84,558</text></g></g>
+<text class="ch-txt" x="320" y="274" text-anchor="middle">Nov</text>
+<g class="ch-pt" tabindex="0">
+<rect class="ch-hit" x="410" y="10" width="180" height="240"/>
+<line class="ch-guide" x1="500" x2="500" y1="10" y2="250"/>
+<circle class="ch-dot" cx="500" cy="140.2" r="5"/>
+<circle cx="500" cy="97.4" r="5" style="fill:var(--accent);stroke:var(--accent)"/>
+<g class="ch-tip"><rect x="420" y="4" width="190" height="66" rx="8"/>
+<text class="ch-t1" x="430" y="21" data-id="Des 2025" data-en="Dec 2025">Des 2025</text>
+<text x="430" y="37" data-id="Aktual: 83,96" data-en="Actual: 83.96">Aktual: 83,96</text>
+<text class="ch-t2" x="430" y="52" data-id="Perkiraan: 81,728" data-en="Forecast: 81.728">Perkiraan: 81,728</text>
+<text class="ch-t2" x="430" y="64" data-id="95%: 78,364–85,092" data-en="95%: 78.364–85.092">95%: 78,364–85,092</text></g></g>
+<text class="ch-txt" x="500" y="274" text-anchor="middle" data-id="Des" data-en="Dec">Des</text>
+</svg>
+   <div class="ch-leg"><span><i class="la"></i><b data-id="Aktual" data-en="Actual">Aktual</b></span><span><i class="l"></i><b data-id="Perkiraan" data-en="Forecast">Perkiraan</b></span><span><i class="b95"></i><b data-id="Interval 95%" data-en="95% interval">Interval 95%</b></span></div>
+   <figcaption data-id="Kelembapan rata-rata (%) pada tiga data uji. " data-en="Average humidity (%) on the three test observations.">Kelembapan rata-rata (%) pada tiga data uji. Arahkan kursor ke tiap bulan untuk melihat nilai aktual, perkiraan, dan intervalnya.</figcaption>
+  </figure>
+  <h4 data-id="Kendala" data-en="Challenges">Kendala</h4>
+  <ul>
+   <li data-id="Model hanya memakai satu variabel eksogen (TAVG) dengan korelasi yang tergolong lemah (r = −0,27), sehingga faktor iklim lain belum tercakup." data-en="The model uses only one exogenous variable (TAVG) with a relatively weak correlation (r = −0.27), so other climate factors are not yet covered.">Model hanya memakai satu variabel eksogen (TAVG) dengan korelasi yang tergolong lemah (r = −0,27), sehingga faktor iklim lain belum tercakup.</li>
+   <li data-id="Data relatif pendek (61 bulan latih) dan evaluasi hanya pada tiga data uji, sehingga pola musiman jangka panjang belum tertangkap kuat." data-en="The data is relatively short (61 training months) and evaluation uses only three test observations, so long-term seasonal patterns are not captured strongly.">Data relatif pendek (61 bulan latih) dan evaluasi hanya pada tiga data uji, sehingga pola musiman jangka panjang belum tertangkap kuat.</li>
+   <li data-id="Data harian BMKG memiliki nilai hilang yang harus diisi dengan interpolasi linear sebelum diagregasi menjadi data bulanan." data-en="The daily BMKG data had missing values that had to be filled by linear interpolation before aggregating to monthly data.">Data harian BMKG memiliki nilai hilang yang harus diisi dengan interpolasi linear sebelum diagregasi menjadi data bulanan.</li>
+  </ul>
+  <h4 data-id="Kesimpulan" data-en="Conclusion">Kesimpulan</h4>
+  <p data-id="ARIMAX(0,0,1) dengan temperatur rata-rata sebagai variabel eksogen mampu meramalkan kelembapan rata-rata Kota Bandar Lampung dengan sangat baik (MAPE 1,99%). Pengembangan berikutnya dapat menambahkan variabel seperti curah hujan, tekanan udara, atau kecepatan angin, memperpanjang periode data, dan membandingkannya dengan ARIMA, SARIMA, Prophet, atau machine learning." data-en="ARIMAX(0,0,1) with average temperature as the exogenous variable forecasts average humidity in Bandar Lampung very well (MAPE 1.99%). Future work could add variables such as rainfall, air pressure, or wind speed, extend the data period, and compare against ARIMA, SARIMA, Prophet, or machine learning.">ARIMAX(0,0,1) dengan temperatur rata-rata sebagai variabel eksogen mampu meramalkan kelembapan rata-rata Kota Bandar Lampung dengan sangat baik (MAPE 1,99%). Pengembangan berikutnya dapat menambahkan variabel seperti curah hujan, tekanan udara, atau kecepatan angin, memperpanjang periode data, dan membandingkannya dengan ARIMA, SARIMA, Prophet, atau machine learning.</p>
+  <h4 data-id="Alat" data-en="Tools">Alat</h4>
+  <p>R (RStudio), data BMKG</p>
+  <h4 data-id="Tautan" data-en="Link">Tautan</h4>
+  <p><a class="proj-link" href="https://repository.itera.ac.id/depan/submission/SB2609020001" target="_blank" rel="noopener noreferrer">repository.itera.ac.id/depan/submission/SB2609020001</a></p>
+  <div class="pd-btns">
+   <a class="btn p" href="https://repository.itera.ac.id/depan/submission/SB2609020001" target="_blank" rel="noopener noreferrer" data-id="Baca skripsi (Repository ITERA)" data-en="Read the thesis (ITERA Repository)">Baca skripsi (Repository ITERA)</a>
+   <button type="button" class="btn" data-close data-id="Tutup" data-en="Close">Tutup</button>
+  </div>
+ </div>
+</dialog>
+
+<script>
+(function(){
+ var root=document.documentElement;
+ function setLang(l){
+  root.lang=l;
+  document.querySelectorAll("[data-id]").forEach(function(el){el.textContent=el.getAttribute("data-"+l)});
+  document.getElementById("en").setAttribute("aria-pressed",l==="en");
+  document.getElementById("id").setAttribute("aria-pressed",l==="id");
+  try{localStorage.setItem("lang",l)}catch(e){}
+ }
+ document.getElementById("en").onclick=function(){setLang("en")};
+ document.getElementById("id").onclick=function(){setLang("id")};
+ var themeBtn=document.getElementById("theme");
+ function dark(){return root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+ function paint(){themeBtn.textContent=dark()?"☀":"☾"}
+ themeBtn.onclick=function(){root.dataset.theme=dark()?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}paint()};
+ var saved="id";
+ try{var t=localStorage.getItem("theme");if(t)root.dataset.theme=t;saved=localStorage.getItem("lang")||"id"}catch(e){}
+ setLang(saved);paint();
+ var nav=document.getElementById("nav"),burger=document.getElementById("burger");
+ burger.onclick=function(){var o=nav.classList.toggle("open");burger.setAttribute("aria-expanded",o)};
+ nav.addEventListener("click",function(){nav.classList.remove("open");burger.setAttribute("aria-expanded","false")});
+ var links=[].slice.call(nav.querySelectorAll("a"));
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});
+ document.querySelectorAll("main section").forEach(function(s){io.observe(s)});
+ /* Detail proyek */
+ document.querySelectorAll("[data-open]").forEach(function(b){function go(){var d=document.getElementById(b.getAttribute("data-open"));if(d&&d.showModal)d.showModal()}b.addEventListener("click",go);b.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}})});
+ document.querySelectorAll("dialog.pd").forEach(function(d){
+  d.addEventListener("click",function(e){if(e.target===d||e.target.hasAttribute("data-close"))d.close()});
+ });
+})();
+</script>
+</body>
+</html>
